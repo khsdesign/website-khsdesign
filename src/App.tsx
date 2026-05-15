@@ -7,6 +7,7 @@ import { StatsBand } from "./components/StatsBand";
 import { Showroom } from "./components/Showroom";
 import { Catalog } from "./components/Catalog";
 import { Footer } from "./components/Footer";
+import { LastBand } from "./components/LastBand";
 // import { useScreen } from "./hooks/useScreen";
 
 const App = () => {
@@ -21,7 +22,7 @@ const App = () => {
       <Services />
       <StatsBand />
       <Showroom />
-      <StatsBand />
+      <LastBand />
 
       {/* Delimiter */}
       {/* <div
