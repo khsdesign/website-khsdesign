@@ -1,17 +1,21 @@
 import { useState } from "react";
-import img1 from "../assets/before-after-1.jpeg";
-import img2 from "../assets/before-after-2.jpeg";
-import img3 from "../assets/before-after-3.jpeg";
-import img4 from "../assets/before-after-4.jpeg";
-import img5 from "../assets/before-after-5.jpeg";
-import img6 from "../assets/before-after-6.jpeg";
+import img1 from "../assets/before-after-7.png";
+import img2 from "../assets/before-after-8.jpeg";
+import img3 from "../assets/before-after-9.jpeg";
+import img4 from "../assets/before-after-10.jpeg";
+import img5 from "../assets/before-after-11.png";
+import img6 from "../assets/before-after-12.png";
 
 const images = [img1, img2, img3, img4, img5, img6];
 
 const tagBase =
   "absolute bottom-4 text-[10px] tracking-[0.14em] uppercase px-3 py-1.5 rounded-full backdrop-blur-sm select-none";
 
-export const BeforeAfterSlider = ({ marginBottom }: { marginBottom: string }) => {
+export const BeforeAfterSlider = ({
+  marginBottom,
+}: {
+  marginBottom: string;
+}) => {
   const [current, setCurrent] = useState(0);
 
   const prev = () => setCurrent((i) => (i - 1 + images.length) % images.length);
@@ -22,15 +26,15 @@ export const BeforeAfterSlider = ({ marginBottom }: { marginBottom: string }) =>
       className="relative rounded-[10px] overflow-hidden"
       style={{ marginBottom }}
     >
-      <img
-        src={images[current]}
-        alt=""
-        className="w-full h-auto block"
-      />
+      <img src={images[current]} alt="" className="w-full h-auto block" />
 
       {/* Randare / Realitate labels */}
-      <span className={`${tagBase} left-4 bg-[#231f20]/65 text-white`}>Randare</span>
-      <span className={`${tagBase} right-4 bg-white/80 text-[#231f20]`}>Realitate</span>
+      <span className={`${tagBase} left-4 bg-[#231f20]/65 text-white`}>
+        Randare
+      </span>
+      <span className={`${tagBase} right-4 bg-white/80 text-[#231f20]`}>
+        Realitate
+      </span>
 
       {/* Left arrow */}
       <button
@@ -38,8 +42,18 @@ export const BeforeAfterSlider = ({ marginBottom }: { marginBottom: string }) =>
         className="absolute left-3 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/55 text-white rounded-full flex items-center justify-center transition-colors w-8 h-8 tablet:w-10 tablet:h-10 desktop:w-12 desktop:h-12"
         aria-label="Înapoi"
       >
-        <svg viewBox="0 0 24 24" fill="none" className="w-4 h-4 tablet:w-5 tablet:h-5 desktop:w-6 desktop:h-6">
-          <path d="M15 18l-6-6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          className="w-4 h-4 tablet:w-5 tablet:h-5 desktop:w-6 desktop:h-6"
+        >
+          <path
+            d="M15 18l-6-6 6-6"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
         </svg>
       </button>
 
@@ -49,8 +63,18 @@ export const BeforeAfterSlider = ({ marginBottom }: { marginBottom: string }) =>
         className="absolute right-3 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/55 text-white rounded-full flex items-center justify-center transition-colors w-8 h-8 tablet:w-10 tablet:h-10 desktop:w-12 desktop:h-12"
         aria-label="Înainte"
       >
-        <svg viewBox="0 0 24 24" fill="none" className="w-4 h-4 tablet:w-5 tablet:h-5 desktop:w-6 desktop:h-6">
-          <path d="M9 18l6-6-6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          className="w-4 h-4 tablet:w-5 tablet:h-5 desktop:w-6 desktop:h-6"
+        >
+          <path
+            d="M9 18l6-6-6-6"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
         </svg>
       </button>
 
