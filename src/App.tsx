@@ -7,11 +7,11 @@ import { StatsBand } from "./components/StatsBand";
 import { Showroom } from "./components/Showroom";
 import { Catalog } from "./components/Catalog";
 import { Footer } from "./components/Footer";
-import { useScreen } from "./hooks/useScreen";
+// import { useScreen } from "./hooks/useScreen";
 
 const App = () => {
-  const { isMobile, isTablet } = useScreen();
-  const v = <T,>(m: T, t: T, l: T): T => (isMobile ? m : isTablet ? t : l);
+  // const { isMobile, isTablet } = useScreen();
+  // const v = <T,>(m: T, t: T, l: T): T => (isMobile ? m : isTablet ? t : l);
 
   return (
     <div className="bg-white w-full font-alike">
