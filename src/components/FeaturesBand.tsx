@@ -27,9 +27,12 @@ export const FeaturesBand = () => {
           <img
             src={iconTick}
             alt=""
-            style={{ width: iconSize, height: iconSize, flexShrink: 0 }}
+            style={{ width: iconSize, height: iconSize, flexShrink: 0, filter: "brightness(0)" }}
           />
-          <div className="leading-tight" style={{ fontSize: textSize }}>
+          <div
+            className="leading-tight font-bold"
+            style={{ fontSize: textSize }}
+          >
             <p>Calitate</p>
             <p>înaltă</p>
           </div>
@@ -38,9 +41,12 @@ export const FeaturesBand = () => {
           <img
             src={iconCoin}
             alt=""
-            style={{ width: iconSize, height: iconSize, flexShrink: 0 }}
+            style={{ width: iconSize, height: iconSize, flexShrink: 0, filter: "brightness(0)" }}
           />
-          <div className="leading-tight" style={{ fontSize: textSize }}>
+          <div
+            className="leading-tight font-bold"
+            style={{ fontSize: textSize }}
+          >
             <p>Prețuri</p>
             <p>accesibile</p>
           </div>
@@ -49,9 +55,12 @@ export const FeaturesBand = () => {
           <img
             src={iconDesign}
             alt=""
-            style={{ width: iconSize, height: iconSize, flexShrink: 0 }}
+            style={{ width: iconSize, height: iconSize, flexShrink: 0, filter: "brightness(0)" }}
           />
-          <div className="leading-tight" style={{ fontSize: textSize }}>
+          <div
+            className="leading-tight font-bold"
+            style={{ fontSize: textSize }}
+          >
             <p>Design în</p>
             <p>72 de ore</p>
           </div>

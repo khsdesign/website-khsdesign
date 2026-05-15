@@ -33,9 +33,9 @@ export const StatsBand = () => {
           <img
             src={iconCustomer}
             alt=""
-            style={{ width: iconSize, height: iconSize, flexShrink: 0 }}
+            style={{ width: iconSize, height: iconSize, flexShrink: 0, filter: "brightness(0)" }}
           />
-          <div className="leading-tight" style={{ fontSize: textSize }}>
+          <div className="leading-tight font-bold" style={{ fontSize: textSize }}>
             <p>Consiliere</p>
             <p>avansată</p>
           </div>
@@ -44,9 +44,9 @@ export const StatsBand = () => {
           <img
             src={iconSupport}
             alt=""
-            style={{ width: iconSize, height: iconSize, flexShrink: 0 }}
+            style={{ width: iconSize, height: iconSize, flexShrink: 0, filter: "brightness(0)" }}
           />
-          <div className="leading-tight" style={{ fontSize: textSize }}>
+          <div className="leading-tight font-bold" style={{ fontSize: textSize }}>
             <p>200+</p>
             <p>Proiecte</p>
           </div>
@@ -55,9 +55,9 @@ export const StatsBand = () => {
           <img
             src={iconExperience}
             alt=""
-            style={{ width: iconSize, height: iconSize, flexShrink: 0 }}
+            style={{ width: iconSize, height: iconSize, flexShrink: 0, filter: "brightness(0)" }}
           />
-          <div className="leading-tight" style={{ fontSize: textSize }}>
+          <div className="leading-tight font-bold" style={{ fontSize: textSize }}>
             <p>20+ Ani</p>
             <p>Experiență</p>
           </div>
