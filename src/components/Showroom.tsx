@@ -23,6 +23,17 @@ const showroomPhotos = [
   { src: showroom2, alt: "Mostre de plăci ceramice în showroom" },
 ];
 
+const mobileShowroomPhotos = [
+  showroom2,
+  showroom1,
+  showroom3,
+  showroom4,
+  showroom5,
+  showroom6,
+  showroom7,
+  showroom8,
+];
+
 export const Showroom = () => {
   const { isMobile, isTablet, isLaptop } = useScreen();
 
@@ -145,22 +156,23 @@ export const Showroom = () => {
         <div style={{ marginBottom: v("16px", "24px", "36px") }}>
           {isMobile ? (
             <div className="space-y-3">
-              {showroomPhotos.map((p, i) => (
-                <figure
-                  key={p.src}
-                  className="relative overflow-hidden rounded-[10px] bg-white shadow-[0_18px_45px_rgba(35,31,32,0.08)]"
-                  style={{
-                    aspectRatio:
-                      i === 0 ? "4 / 5" : i === 1 ? "16 / 10" : "4 / 3",
-                  }}
-                >
-                  <img
-                    src={p.src as string}
-                    alt={p.alt}
-                    className="h-full w-full object-cover transition-transform duration-500 hover:scale-[1.03]"
-                  />
-                </figure>
-              ))}
+              {mobileShowroomPhotos.map((src, index) => {
+                const photo = showroomPhotos.find((item) => item.src === src);
+
+                return (
+                  <figure
+                    key={src}
+                    className="relative overflow-hidden rounded-[10px] bg-white shadow-[0_18px_45px_rgba(35,31,32,0.08)]"
+                    style={{ aspectRatio: "4 / 3" }}
+                  >
+                    <img
+                      src={src as string}
+                      alt={photo?.alt ?? `Showroom imagine ${index + 1}`}
+                      className="h-full w-full object-cover transition-transform duration-500 hover:scale-[1.03]"
+                    />
+                  </figure>
+                );
+              })}
             </div>
           ) : (
             <div
