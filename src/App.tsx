@@ -11,7 +11,7 @@ import { useScreen } from "./hooks/useScreen";
 
 const App = () => {
   const { isMobile, isTablet } = useScreen();
-  const v = <T,>(m: T, t: T, l: T): T => isMobile ? m : isTablet ? t : l;
+  const v = <T,>(m: T, t: T, l: T): T => (isMobile ? m : isTablet ? t : l);
 
   return (
     <div className="bg-white w-full font-alike">
@@ -21,19 +21,20 @@ const App = () => {
       <Services />
       <StatsBand />
       <Showroom />
+      <StatsBand />
 
       {/* Delimiter */}
-      <div
-        className="bg-black flex items-center justify-center w-full"
+      {/* <div
+        className="bg-white flex items-center justify-center w-full"
         style={{ height: v("95px", "109px", "153px") }}
       >
         <h2
-          className="text-white"
+          className="text-[#231f20]"
           style={{ fontSize: v("24px", "32px", "48px"), letterSpacing: "0.03em" }}
         >
           DELIMITARE
         </h2>
-      </div>
+      </div> */}
 
       <Catalog />
       <Footer />
