@@ -63,7 +63,7 @@ export const Footer = () => {
             <img
               src={iconTiktok}
               alt="TikTok"
-              className="hover:opacity-70 transition-opacity"
+              className="hover:opacity-70 transition-opacity brightness-0"
               style={{
                 width: v("24px", "50px", "87px"),
                 height: v("24px", "50px", "87px"),
@@ -78,7 +78,7 @@ export const Footer = () => {
             <img
               src={iconInstagram}
               alt="Instagram"
-              className="hover:opacity-70 transition-opacity"
+              className="hover:opacity-70 transition-opacity brightness-0"
               style={{
                 width: v("24px", "50px", "87px"),
                 height: v("24px", "50px", "87px"),
@@ -93,7 +93,7 @@ export const Footer = () => {
             <img
               src={iconFacebook}
               alt="Facebook"
-              className="hover:opacity-70 transition-opacity"
+              className="hover:opacity-70 transition-opacity brightness-0"
               style={{
                 width: v("24px", "50px", "87px"),
                 height: v("24px", "50px", "87px"),
