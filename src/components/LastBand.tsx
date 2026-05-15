@@ -33,9 +33,18 @@ export const LastBand = () => {
           <img
             src={iconRarity}
             alt=""
-            style={{ width: iconSize, height: iconSize, flexShrink: 0, filter: "brightness(0) invert(1)" }}
+            style={{
+              width: iconSize,
+              height: iconSize,
+              flexShrink: 0,
+              //   filter: "brightness(0) invert(1)",
+              color: "black",
+            }}
           />
-          <div className="leading-tight" style={{ fontSize: textSize }}>
+          <div
+            className="leading-tight font-bold"
+            style={{ fontSize: textSize }}
+          >
             <p>Design</p>
             <p>unicat</p>
           </div>
@@ -44,9 +53,18 @@ export const LastBand = () => {
           <img
             src={iconAdaptability}
             alt=""
-            style={{ width: iconSize, height: iconSize, flexShrink: 0, filter: "brightness(0) invert(1)" }}
+            style={{
+              width: iconSize,
+              height: iconSize,
+              flexShrink: 0,
+              //   filter: "brightness(0) invert(1)",
+              color: "black",
+            }}
           />
-          <div className="leading-tight" style={{ fontSize: textSize }}>
+          <div
+            className="leading-tight font-bold"
+            style={{ fontSize: textSize }}
+          >
             <p>Soluții</p>
             <p>adaptabile</p>
           </div>
@@ -55,9 +73,18 @@ export const LastBand = () => {
           <img
             src={iconTrend}
             alt=""
-            style={{ width: iconSize, height: iconSize, flexShrink: 0, filter: "brightness(0) invert(1)" }}
+            style={{
+              width: iconSize,
+              height: iconSize,
+              flexShrink: 0,
+              //   filter: "brightness(0) invert(1)",
+              color: "black",
+            }}
           />
-          <div className="leading-tight" style={{ fontSize: textSize }}>
+          <div
+            className="leading-tight font-bold"
+            style={{ fontSize: textSize }}
+          >
             <p>Trenduri</p>
             <p>actuale</p>
           </div>
