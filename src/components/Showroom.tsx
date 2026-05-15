@@ -9,6 +9,7 @@ import showroom7 from "../assets/Poze showroom/7.jpeg";
 import showroom8 from "../assets/Poze showroom/8.jpeg";
 import showroom9 from "../assets/Poze showroom/9.jpeg";
 import { useScreen } from "../hooks/useScreen";
+import type { ReactElement } from "react";
 
 const showroomPhotos = [
   { src: showroom9, alt: "Showroom imagine 9" },
@@ -24,9 +25,12 @@ const showroomPhotos = [
 
 export const Showroom = () => {
   const { isMobile, isTablet, isLaptop } = useScreen();
-  const v = <T,>(m: T, t: T, l: T): T => (isMobile ? m : isTablet ? t : l);
 
-  const desktopFigures: JSX.Element[] = [];
+  function v<T>(m: T, t: T, l: T): T {
+    return isMobile ? m : isTablet ? t : l;
+  }
+
+  const desktopFigures: ReactElement[] = [];
   {
     const colRowPointer = [1, 1, 1];
     for (let i = 0; i < showroomPhotos.length; i++) {
