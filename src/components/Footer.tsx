@@ -5,6 +5,7 @@ import iconPin from "../assets/icon-pin.svg";
 import iconTiktok from "../assets/social-tiktok.svg";
 import iconInstagram from "../assets/social-instagram.svg";
 import iconFacebook from "../assets/social-facebook.svg";
+import BlancoDark from "../assets/blanco6grm.png";
 import { useScreen } from "../hooks/useScreen";
 
 export const Footer = () => {
@@ -12,12 +13,9 @@ export const Footer = () => {
   const v = <T,>(m: T, t: T, l: T): T => (isMobile ? m : isTablet ? t : l);
 
   return (
-    <footer
-      id="contact"
-      className="relative w-full overflow-hidden text-[#231f20]"
-    >
+    <footer id="contact" className="relative w-full overflow-hidden text-black">
       <img
-        src={vis6278pbrm}
+        src={BlancoDark}
         alt=""
         className="absolute object-cover h-full w-full inset-0"
       />
@@ -116,7 +114,7 @@ export const Footer = () => {
           {/* Contact */}
           <div>
             <h3
-              className="text-[#555]"
+              className="text-black"
               style={{
                 fontSize: v("20px", "32px", "48px"),
                 marginBottom: v("12px", "20px", "32px"),
@@ -125,7 +123,7 @@ export const Footer = () => {
               CONTACT
             </h3>
             <div
-              className="text-[#555]"
+              className="text-black"
               style={{ fontSize: v("13px", "24px", "36px") }}
             >
               <div
@@ -138,6 +136,7 @@ export const Footer = () => {
                 <img
                   src={iconPhone}
                   alt=""
+                  className="brightness-0"
                   style={{
                     width: v("27px", "48px", "83px"),
                     height: v("27px", "48px", "83px"),
@@ -156,6 +155,7 @@ export const Footer = () => {
                 <img
                   src={iconPhone}
                   alt=""
+                  className="brightness-0"
                   style={{
                     width: v("27px", "48px", "83px"),
                     height: v("27px", "48px", "83px"),
@@ -174,6 +174,7 @@ export const Footer = () => {
                 <img
                   src={iconPin}
                   alt=""
+                  className="brightness-0"
                   style={{
                     width: v("27px", "48px", "83px"),
                     height: v("27px", "48px", "83px"),
@@ -201,7 +202,7 @@ export const Footer = () => {
           {/* Program */}
           <div>
             <h3
-              className="text-[#555]"
+              className="text-black"
               style={{
                 fontSize: v("20px", "32px", "48px"),
                 marginBottom: v("12px", "20px", "32px"),
@@ -210,7 +211,7 @@ export const Footer = () => {
               PROGRAM
             </h3>
             <div
-              className="text-[#555]"
+              className="text-black"
               style={{ fontSize: v("13px", "24px", "36px") }}
             >
               <p style={{ marginBottom: v("4px", "8px", "12px") }}>
@@ -245,7 +246,7 @@ export const Footer = () => {
 
         {/* Copyright */}
         <div
-          className="text-center text-[#555] border-t border-[#231f20]/20"
+          className="text-center text-black border-t border-[#231f20]/20"
           style={{
             fontSize: v("13px", "24px", "36px"),
             paddingTop: v("8px", "12px", "24px"),
