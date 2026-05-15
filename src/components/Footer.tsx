@@ -1,5 +1,4 @@
 import khsLogo from "../assets/khs-logo.png";
-import vis6278pbrm from "../assets/vis6278pbrm.png";
 import iconPhone from "../assets/icon-phone.svg";
 import iconPin from "../assets/icon-pin.svg";
 import iconTiktok from "../assets/social-tiktok.svg";
