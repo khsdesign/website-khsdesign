@@ -1,8 +1,8 @@
-import imolaSanPe from "../assets/imola-san-pe.jpg";
 import iconCustomer from "../assets/icon-customer.png";
 import iconSupport from "../assets/icon-support.png";
 import iconExperience from "../assets/icon-experience.png";
 import { useScreen } from "../hooks/useScreen";
+import BlancoDark from "../assets/blanco6grm.png";
 
 export const StatsBand = () => {
   const { isMobile, isTablet } = useScreen();
@@ -18,7 +18,7 @@ export const StatsBand = () => {
       style={{ height: v("75px", "109px", "149px") }}
     >
       <img
-        src={imolaSanPe}
+        src={BlancoDark}
         alt=""
         className="absolute inset-0 w-full h-full object-cover"
       />

@@ -1,8 +1,8 @@
-import imolaSanPe from "../assets/imola-san-pe.jpg";
 import iconTick from "../assets/icon-tick.png";
 import iconCoin from "../assets/icon-coin.png";
 import iconDesign from "../assets/icon-design.png";
 import { useScreen } from "../hooks/useScreen";
+import BlancoDark from "../assets/blanco6grm.png";
 
 export const FeaturesBand = () => {
   const { isMobile, isTablet } = useScreen();
@@ -18,7 +18,7 @@ export const FeaturesBand = () => {
       style={{ height: v("75px", "109px", "149px") }}
     >
       <img
-        src={imolaSanPe}
+        src={BlancoDark}
         alt=""
         className="absolute inset-0 w-full h-full object-cover"
       />

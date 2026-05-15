@@ -1,4 +1,4 @@
-import laFaenzaCoutureZeus from "../assets/lafaenza-couture-zeus.jpg";
+import LaFanezaBlancoW from "../assets/lafaenza-blanco-w.png";
 import showroomInnerBg from "../assets/showroom-inner-bg.png";
 import { useScreen } from "../hooks/useScreen";
 
@@ -9,7 +9,7 @@ export const Showroom = () => {
   return (
     <section id="showroom" className="relative w-full overflow-hidden">
       <img
-        src={laFaenzaCoutureZeus}
+        src={LaFanezaBlancoW}
         alt=""
         className="absolute inset-0 w-full h-full object-cover"
       />

@@ -1,7 +1,6 @@
 import khsLogo from "../assets/khs-logo.png";
-import imolaSanPe from "../assets/imola-san-pe.jpg";
 import { useScreen } from "../hooks/useScreen";
-
+import BlancoDark from "../assets/blanco6grm.png";
 export const Header = () => {
   const { isMobile, isTablet } = useScreen();
   const v = <T,>(m: T, t: T, l: T): T => (isMobile ? m : isTablet ? t : l);
@@ -19,13 +18,16 @@ export const Header = () => {
       }}
     >
       <img
-        src={imolaSanPe}
+        src={BlancoDark}
         alt=""
         className="absolute inset-0 w-full h-full object-cover"
       />
       <a
         href="#"
-        onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}
+        onClick={(e) => {
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }}
         className="relative"
       >
         <img

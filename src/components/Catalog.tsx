@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import laFaenzaCoutureZeus from "../assets/lafaenza-couture-zeus.jpg";
+import LaFanezaBlancoW from "../assets/lafaenza-blanco-w.png";
 import { useScreen } from "../hooks/useScreen";
 
 // Gresie logos
@@ -42,16 +42,48 @@ type Partner = {
 };
 
 const gresiiBestSellers: Partner[] = [
-  { name: "CERAMICA IMOLA", url: "https://imolaceramica.com/en/", logo: logoImola },
-  { name: "LAFAENZA CERAMICA", url: "https://lafaenzaceramica.com/", logo: logoLaFaenza },
-  { name: "SERENISSIMA", url: "https://www.serenissima.re.it/", logo: logoSerenissima },
-  { name: "CIR MANIFATTURE CERAMICHE", url: "https://www.cir.it/?lang=en", logo: logoCir },
-  { name: "LEONARDO CERAMICA", url: "https://leonardoceramica.com/en/", logo: logoLeonardo },
-  { name: "MUSEUM BY PERONDA", url: "https://museumsurfaces.com/", logo: logoMuseum },
-  { name: "CASALGRANDE PADANA", url: "https://www.casalgrandepadana.com/", logo: logoCasalgrande },
+  {
+    name: "CERAMICA IMOLA",
+    url: "https://imolaceramica.com/en/",
+    logo: logoImola,
+  },
+  {
+    name: "LAFAENZA CERAMICA",
+    url: "https://lafaenzaceramica.com/",
+    logo: logoLaFaenza,
+  },
+  {
+    name: "SERENISSIMA",
+    url: "https://www.serenissima.re.it/",
+    logo: logoSerenissima,
+  },
+  {
+    name: "CIR MANIFATTURE CERAMICHE",
+    url: "https://www.cir.it/?lang=en",
+    logo: logoCir,
+  },
+  {
+    name: "LEONARDO CERAMICA",
+    url: "https://leonardoceramica.com/en/",
+    logo: logoLeonardo,
+  },
+  {
+    name: "MUSEUM BY PERONDA",
+    url: "https://museumsurfaces.com/",
+    logo: logoMuseum,
+  },
+  {
+    name: "CASALGRANDE PADANA",
+    url: "https://www.casalgrandepadana.com/",
+    logo: logoCasalgrande,
+  },
   { name: "STARGRES", url: "https://stargres.pl/", logo: logoStargres },
   { name: "COLORKER", url: "https://www.colorker.com/en/", logo: logoColorker },
-  { name: "NATUCER", url: "https://www.natucer.es/en/index", logo: logoNatucer },
+  {
+    name: "NATUCER",
+    url: "https://www.natucer.es/en/index",
+    logo: logoNatucer,
+  },
 ];
 
 const gresiiMore: Partner[] = [
@@ -68,14 +100,28 @@ const gresiiMore: Partner[] = [
     url: "https://cerrad.com/us/",
     logo: logoCerrad,
     selectie: true,
-    collections: ["Taranto", "Nickwood", "Calacatta", "Softcement", "Vario", "Tassero", "Salzburg", "Mirador"],
+    collections: [
+      "Taranto",
+      "Nickwood",
+      "Calacatta",
+      "Softcement",
+      "Vario",
+      "Tassero",
+      "Salzburg",
+      "Mirador",
+    ],
   },
   {
     name: "GARDENIA ORCHIDEA",
     url: "https://www.gardenia.it/en/",
     logo: logoGardenia,
     selectie: true,
-    collections: ["Woodstyle Plus", "Vintage Fossil", "Brix Stone", "Velvet Concrete"],
+    collections: [
+      "Woodstyle Plus",
+      "Vintage Fossil",
+      "Brix Stone",
+      "Velvet Concrete",
+    ],
   },
   {
     name: "GRANITO FORTE",
@@ -84,30 +130,58 @@ const gresiiMore: Partner[] = [
     selectie: true,
     collections: ["Porfido d'Abruzzo", "Granito Classic"],
   },
-  { name: "VERSACE CERAMICS", url: "https://www.versace-ceramics.com/en/", logo: logoVersace },
+  {
+    name: "VERSACE CERAMICS",
+    url: "https://www.versace-ceramics.com/en/",
+    logo: logoVersace,
+  },
 ];
 
 const sanitareBestSellers: Partner[] = [
-  { name: "VILLEROY & BOCH", url: "https://www.villeroy-boch.eu/c/bathroom-ceramic/", logo: logoVilleroy },
+  {
+    name: "VILLEROY & BOCH",
+    url: "https://www.villeroy-boch.eu/c/bathroom-ceramic/",
+    logo: logoVilleroy,
+  },
   { name: "HANSGROHE", url: "https://www.hansgrohe.ro/", logo: logoHansgrohe },
   { name: "GROHE", url: "https://www.grohe.ro/ro_ro/", logo: logoGrohe },
-  { name: "BATHCO", url: "https://www.thebathcollection.com/en/", logo: logoBathco },
+  {
+    name: "BATHCO",
+    url: "https://www.thebathcollection.com/en/",
+    logo: logoBathco,
+  },
   { name: "KLUDI", url: "https://www.kludi.com/hr", logo: logoKludi },
-  { name: "FIMA CARLO FRATTINI", url: "https://fimacf.com/en/", logo: logoFima },
+  {
+    name: "FIMA CARLO FRATTINI",
+    url: "https://fimacf.com/en/",
+    logo: logoFima,
+  },
   { name: "GEBERIT", url: "https://www.geberit.ro/acasa/", logo: logoGeberit },
   { name: "WELLIS", url: "https://wellis.com/", logo: logoWellis },
 ];
 
 const sanitareMore: Partner[] = [
   { name: "FLORIDA", url: "https://www.jollycluj.ro/Brand_Florida_46.html" },
-  { name: "FLUMINIA", url: "https://www.jollycluj.ro/Brand_Fluminia_87.html", logo: logoFluminia },
+  {
+    name: "FLUMINIA",
+    url: "https://www.jollycluj.ro/Brand_Fluminia_87.html",
+    logo: logoFluminia,
+  },
   { name: "FERRO", url: "https://www.ferro.ro/", logo: logoFerro },
   { name: "KOLPA SAN", url: "https://www.kolpa.si/en", logo: logoKolpa },
 ];
 
-const SelectieModal = ({ partner, onClose }: { partner: Partner; onClose: () => void }) => {
+const SelectieModal = ({
+  partner,
+  onClose,
+}: {
+  partner: Partner;
+  onClose: () => void;
+}) => {
   useEffect(() => {
-    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
     document.addEventListener("keydown", onKey);
     document.body.style.overflow = "hidden";
     return () => {
@@ -135,7 +209,12 @@ const SelectieModal = ({ partner, onClose }: { partner: Partner; onClose: () => 
           aria-label="Închide"
         >
           <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-            <path d="M3 3L15 15M15 3L3 15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+            <path
+              d="M3 3L15 15M15 3L3 15"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+            />
           </svg>
         </button>
 
@@ -158,7 +237,10 @@ const SelectieModal = ({ partner, onClose }: { partner: Partner; onClose: () => 
           className={`mb-6 ${manyCollections ? "grid grid-cols-2 gap-x-4 gap-y-2" : "space-y-2"}`}
         >
           {partner.collections?.map((col) => (
-            <li key={col} className="text-[#231f20] text-sm flex items-center gap-2">
+            <li
+              key={col}
+              className="text-[#231f20] text-sm flex items-center gap-2"
+            >
               <span className="w-1 h-1 rounded-full bg-[#231f20]/30 flex-shrink-0" />
               {col}
             </li>
@@ -185,16 +267,25 @@ const CardInner = ({ partner }: { partner: Partner }) => (
         Selecție
       </span>
     )}
-    <div className="w-4/5 flex items-center justify-center" style={{ aspectRatio: "3/2" }}>
+    <div
+      className="w-4/5 flex items-center justify-center"
+      style={{ aspectRatio: "3/2" }}
+    >
       {partner.logo ? (
-        <img src={partner.logo} alt={partner.name} className="max-w-full max-h-full object-contain" />
+        <img
+          src={partner.logo}
+          alt={partner.name}
+          className="max-w-full max-h-full object-contain"
+        />
       ) : (
         <div className="w-full h-full rounded-[5px] bg-[#e8e8e8] flex items-center justify-center">
           <span className="text-[#bbb] text-xs tracking-widest">LOGO</span>
         </div>
       )}
     </div>
-    <p className="text-[#231f20] font-medium text-xs text-center leading-tight">{partner.name}</p>
+    <p className="text-[#231f20] font-medium text-xs text-center leading-tight">
+      {partner.name}
+    </p>
   </>
 );
 
@@ -235,11 +326,20 @@ const PartnerCard = ({
 
 const ChevronIcon = ({ open }: { open: boolean }) => (
   <svg
-    width="14" height="14" viewBox="0 0 14 14" fill="none"
+    width="14"
+    height="14"
+    viewBox="0 0 14 14"
+    fill="none"
     className="transition-transform duration-300"
     style={{ transform: open ? "rotate(180deg)" : "rotate(0deg)" }}
   >
-    <path d="M2 5L7 10L12 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    <path
+      d="M2 5L7 10L12 5"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
   </svg>
 );
 
@@ -269,12 +369,22 @@ const PartnerSection = ({
   const [showMore, setShowMore] = useState(false);
   return (
     <div style={{ marginBottom: sectionMargin }}>
-      <h3 className="text-[#231f20]" style={{ fontSize: titleSize, marginBottom: titleMargin }}>
+      <h3
+        className="text-[#231f20]"
+        style={{ fontSize: titleSize, marginBottom: titleMargin }}
+      >
         {title}
       </h3>
-      <div style={{ display: "grid", gridTemplateColumns: gridCols, gap: gridGap }}>
-        {bestSellers.map((p) => <PartnerCard key={p.name} partner={p} onSelectie={onSelectie} />)}
-        {showMore && more.map((p) => <PartnerCard key={p.name} partner={p} onSelectie={onSelectie} />)}
+      <div
+        style={{ display: "grid", gridTemplateColumns: gridCols, gap: gridGap }}
+      >
+        {bestSellers.map((p) => (
+          <PartnerCard key={p.name} partner={p} onSelectie={onSelectie} />
+        ))}
+        {showMore &&
+          more.map((p) => (
+            <PartnerCard key={p.name} partner={p} onSelectie={onSelectie} />
+          ))}
       </div>
       {more.length > 0 && (
         <button
@@ -312,7 +422,11 @@ export const Catalog = () => {
           paddingBottom: v("40px", "80px", "160px"),
         }}
       >
-        <img src={laFaenzaCoutureZeus} alt="" className="absolute inset-0 w-full h-full object-cover" />
+        <img
+          src={LaFanezaBlancoW}
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover"
+        />
         <div
           className="relative max-w-[1512px] mx-auto"
           style={{
@@ -337,9 +451,9 @@ export const Catalog = () => {
               marginBottom: v("36px", "60px", "100px"),
             }}
           >
-            Explorează colecțiile complete ale partenerilor noștri internaționali.
-            Selectează un brand pentru a accesa cele mai noi cataloage și a găsi
-            inspirația pentru proiectul tău.
+            Explorează colecțiile complete ale partenerilor noștri
+            internaționali. Selectează un brand pentru a accesa cele mai noi
+            cataloage și a găsi inspirația pentru proiectul tău.
           </p>
 
           <PartnerSection
@@ -370,7 +484,10 @@ export const Catalog = () => {
         </div>
       </section>
       {modalPartner && (
-        <SelectieModal partner={modalPartner} onClose={() => setModalPartner(null)} />
+        <SelectieModal
+          partner={modalPartner}
+          onClose={() => setModalPartner(null)}
+        />
       )}
     </>
   );

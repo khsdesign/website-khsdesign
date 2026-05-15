@@ -1,5 +1,5 @@
 import khsLogo from "../assets/khs-logo.png";
-import imolaSanPe from "../assets/imola-san-pe.jpg";
+import vis6278pbrm from "../assets/vis6278pbrm.png";
 import iconPhone from "../assets/icon-phone.svg";
 import iconPin from "../assets/icon-pin.svg";
 import iconTiktok from "../assets/social-tiktok.svg";
@@ -17,7 +17,7 @@ export const Footer = () => {
       className="relative w-full overflow-hidden text-[#231f20]"
     >
       <img
-        src={imolaSanPe}
+        src={vis6278pbrm}
         alt=""
         className="absolute object-cover h-full w-full inset-0"
       />
@@ -229,7 +229,12 @@ export const Footer = () => {
               src="https://maps.google.com/maps?q=Str.+Aurel+Vlaicu+Nr.+100,+Satu+Mare,+Romania&output=embed"
               width="100%"
               height="100%"
-              style={{ border: 0, borderRadius: "5px", minHeight: v("200px", "260px", "320px"), display: "block" }}
+              style={{
+                border: 0,
+                borderRadius: "5px",
+                minHeight: v("200px", "260px", "320px"),
+                display: "block",
+              }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
