@@ -1,10 +1,78 @@
 import LaFanezaBlancoW from "../assets/lafaenza-blanco-w.png";
-import showroomInnerBg from "../assets/showroom-inner-bg.png";
+import showroom1 from "../assets/Poze showroom/1.jpeg";
+import showroom2 from "../assets/Poze showroom/2.jpeg";
+import showroom3 from "../assets/Poze showroom/3.jpeg";
+import showroom4 from "../assets/Poze showroom/4.jpeg";
+import showroom5 from "../assets/Poze showroom/5.jpeg";
+import showroom6 from "../assets/Poze showroom/6.jpeg";
+import showroom7 from "../assets/Poze showroom/7.jpeg";
+import showroom8 from "../assets/Poze showroom/8.jpeg";
+import showroom9 from "../assets/Poze showroom/9.jpeg";
 import { useScreen } from "../hooks/useScreen";
 
+const showroomPhotos = [
+  { src: showroom9, alt: "Showroom imagine 9" },
+  { src: showroom1, alt: "Showroom KHS cu panouri ceramice expuse" },
+  { src: showroom3, alt: "Panouri decorative și obiecte de prezentare" },
+  { src: showroom4, alt: "Aleea principală din showroom" },
+  { src: showroom5, alt: "Colț de relaxare în showroom" },
+  { src: showroom6, alt: "Plăci și finisaje expuse lângă vegetație" },
+  { src: showroom7, alt: "Selecție de finisaje și panouri ceramice" },
+  { src: showroom8, alt: "Showroom imagine 8" },
+  { src: showroom2, alt: "Mostre de plăci ceramice în showroom" },
+];
+
 export const Showroom = () => {
-  const { isMobile, isTablet } = useScreen();
+  const { isMobile, isTablet, isLaptop } = useScreen();
   const v = <T,>(m: T, t: T, l: T): T => (isMobile ? m : isTablet ? t : l);
+
+  const desktopFigures: JSX.Element[] = [];
+  {
+    const colRowPointer = [1, 1, 1];
+    for (let i = 0; i < showroomPhotos.length; i++) {
+      const p = showroomPhotos[i];
+
+      const colIndex = Math.floor(i / 3); // 0..2
+      const colStart = colIndex * 4 + 1;
+      const posInCol = (i % 3) + 1;
+
+      let rowSpan = 2;
+      if (colIndex === 0 || colIndex === 2) {
+        rowSpan = posInCol === 1 ? 1 : 2;
+      } else {
+        rowSpan = posInCol === 3 ? 1 : 2;
+      }
+
+      const rowStart = colRowPointer[colIndex];
+
+      desktopFigures.push(
+        <figure
+          key={p.src}
+          className="relative overflow-hidden rounded-[10px] bg-white shadow-[0_18px_45px_rgba(35,31,32,0.08)]"
+          style={{
+            gridColumn: `${colStart} / span 4`,
+            gridRow: `${rowStart} / span ${rowSpan}`,
+            display: "block",
+          }}
+        >
+          <img
+            src={p.src as string}
+            alt={p.alt}
+            className="h-full w-full object-cover transition-transform duration-500 hover:scale-[1.03]"
+            style={{ display: "block", width: "100%", height: "100%" }}
+          />
+        </figure>,
+      );
+
+      colRowPointer[colIndex] += rowSpan;
+    }
+  }
+  // build columns for stacked layout (ensures equal vertical gaps)
+  const columns: { src: string; alt: string }[][] = [[], [], []];
+  for (let i = 0; i < showroomPhotos.length; i++) {
+    const colIndex = Math.floor(i / 3); // 0..2
+    columns[colIndex].push(showroomPhotos[i] as { src: string; alt: string });
+  }
 
   return (
     <section id="showroom" className="relative w-full overflow-hidden">
@@ -70,31 +138,87 @@ export const Showroom = () => {
           </p>
         </div>
 
-        <div
-          className="relative rounded-[5px] overflow-hidden"
-          style={{
-            aspectRatio: "373/176",
-            marginBottom: v("16px", "24px", "36px"),
-          }}
-        >
-          <img
-            src={showroomInnerBg}
-            alt=""
-            className="w-full h-full object-cover"
-          />
-        </div>
+        <div style={{ marginBottom: v("16px", "24px", "36px") }}>
+          {isMobile ? (
+            <div className="space-y-3">
+              {showroomPhotos.map((p, i) => (
+                <figure
+                  key={p.src}
+                  className="relative overflow-hidden rounded-[10px] bg-white shadow-[0_18px_45px_rgba(35,31,32,0.08)]"
+                  style={{
+                    aspectRatio:
+                      i === 0 ? "4 / 5" : i === 1 ? "16 / 10" : "4 / 3",
+                  }}
+                >
+                  <img
+                    src={p.src as string}
+                    alt={p.alt}
+                    className="h-full w-full object-cover transition-transform duration-500 hover:scale-[1.03]"
+                  />
+                </figure>
+              ))}
+            </div>
+          ) : (
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(12, 1fr)",
+                gap: "10px",
+                alignItems: "start",
+              }}
+            >
+              {columns.map((col, ci) => {
+                const colStart = ci * 4 + 1;
+                // make the grid longer: larger base heights for tablet and laptop
+                // increase laptop base and make small images 66% of big ones
+                const base = isTablet ? 380 : isLaptop ? 900 : 200;
+                const big = Math.round(base * 1.2);
+                const small = Math.round(big * 0.66);
 
-        <div
-          className="bg-white rounded-[10px] flex items-center justify-center"
-          style={{ aspectRatio: "3/2" }}
-        >
-          <div
-            className="text-black text-center leading-tight"
-            style={{ fontSize: v("32px", "48px", "64px") }}
-          >
-            <p>POZE SHOWROOM</p>
-            <p>TIP LAYOUT/GRID</p>
-          </div>
+                return (
+                  <div
+                    key={`col-${ci}`}
+                    style={{
+                      gridColumn: `${colStart} / span 4`,
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "10px",
+                    }}
+                  >
+                    {col.map((p, idx) => {
+                      // pattern: columns 0 and 2 -> [small, big, big]
+                      // column 1 -> [big, big, small]
+                      let h = big;
+                      if (ci === 0 || ci === 2) {
+                        h = idx === 0 ? small : big;
+                      } else {
+                        h = idx === 2 ? small : big;
+                      }
+
+                      return (
+                        <figure
+                          key={p.src}
+                          className="relative overflow-hidden rounded-[10px] bg-white shadow-[0_18px_45px_rgba(35,31,32,0.08)]"
+                          style={{ height: `${h}px`, display: "block" }}
+                        >
+                          <img
+                            src={p.src as string}
+                            alt={p.alt}
+                            className="h-full w-full object-cover transition-transform duration-500 hover:scale-[1.03]"
+                            style={{
+                              display: "block",
+                              width: "100%",
+                              height: "100%",
+                            }}
+                          />
+                        </figure>
+                      );
+                    })}
+                  </div>
+                );
+              })}
+            </div>
+          )}
         </div>
       </div>
     </section>
