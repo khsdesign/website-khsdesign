@@ -1,14 +1,14 @@
 import backgroundLaptop from "../assets/background-laptop.webp";
 import backgroundShowroomMobile from "../assets/background-showroom-mobile.webp";
-import showroom1 from "../assets/Poze showroom/1.jpeg";
-import showroom2 from "../assets/Poze showroom/2.jpeg";
-import showroom3 from "../assets/Poze showroom/3.jpeg";
-import showroom4 from "../assets/Poze showroom/4.jpeg";
-import showroom5 from "../assets/Poze showroom/5.jpeg";
-import showroom6 from "../assets/Poze showroom/6.jpeg";
-import showroom7 from "../assets/Poze showroom/7.jpeg";
-import showroom8 from "../assets/Poze showroom/8.jpeg";
-import showroom9 from "../assets/Poze showroom/9.jpeg";
+import showroom1 from "../assets/Poze showroom/1.webp";
+import showroom2 from "../assets/Poze showroom/2.webp";
+import showroom3 from "../assets/Poze showroom/3.webp";
+import showroom4 from "../assets/Poze showroom/4.webp";
+import showroom5 from "../assets/Poze showroom/5.webp";
+import showroom6 from "../assets/Poze showroom/6.webp";
+import showroom7 from "../assets/Poze showroom/7.webp";
+import showroom8 from "../assets/Poze showroom/8.webp";
+import showroom9 from "../assets/Poze showroom/9.webp";
 import { useScreen } from "../hooks/useScreen";
 import type { ReactElement } from "react";
 
