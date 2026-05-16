@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { useScreen } from "../hooks/useScreen";
-import img1 from "../assets/before-after-7.png";
-import img2 from "../assets/before-after-8.jpeg";
-import img3 from "../assets/before-after-9.jpeg";
-import img4 from "../assets/before-after-10.jpeg";
-import img5 from "../assets/before-after-11.png";
-import img6 from "../assets/before-after-12.png";
+import img1 from "../assets/before-after-7.webp";
+import img2 from "../assets/before-after-8.webp";
+import img3 from "../assets/before-after-9.webp";
+import img4 from "../assets/before-after-10.webp";
+import img5 from "../assets/before-after-11.webp";
+import img6 from "../assets/before-after-12.webp";
 
 const images = [img1, img2, img3, img4, img5, img6];
 
@@ -29,8 +29,8 @@ export const BeforeAfterSlider = ({
       className="relative rounded-[10px] overflow-hidden"
       style={{
         marginBottom,
-        height: v("auto", "75vh", "75vh"),
-        maxHeight: v("none", "75vh", "75vh"),
+        height: v("40vh", "75vh", "75vh"),
+        maxHeight: v("40vh", "75vh", "75vh"),
       }}
     >
       <img

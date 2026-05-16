@@ -1,38 +1,38 @@
 import { useState, useEffect } from "react";
-import LaFanezaBlancoW from "../assets/lafaenza-blanco-w.png";
-import backgroundLaptop from "../assets/background-laptop.png";
+import LaFanezaBlancoW from "../assets/lafaenza-blanco-w.webp";
+import backgroundLaptop from "../assets/background-laptop.webp";
 import { useScreen } from "../hooks/useScreen";
 
 // Gresie logos
-import logoImola from "../assets/Parteneri gresii/Imola.png";
-import logoLaFaenza from "../assets/Parteneri gresii/La Faenza.png";
-import logoSerenissima from "../assets/Parteneri gresii/Serenissima.png";
-import logoCir from "../assets/Parteneri gresii/Cir Ceramiche.png";
-import logoLeonardo from "../assets/Parteneri gresii/Leonardo Ceramica.png";
-import logoMuseum from "../assets/Parteneri gresii/Museum by Perdona.png";
-import logoCasalgrande from "../assets/Parteneri gresii/Casalgrande Padana.png";
-import logoStargres from "../assets/Parteneri gresii/Stargres.png";
-import logoColorker from "../assets/Parteneri gresii/Colorker.png";
-import logoNatucer from "../assets/Parteneri gresii/Natucer.png";
-import logoPanaria from "../assets/Parteneri gresii/Panaria.png";
-import logoAtlasConcorde from "../assets/Parteneri gresii/Atlas Concorde.png";
-import logoCerrad from "../assets/Parteneri gresii/Cerrad.png";
-import logoGardenia from "../assets/Parteneri gresii/Gardenia Orchidea.png";
-import logoGranitoForte from "../assets/Parteneri gresii/Granito Forte.png";
-import logoVersace from "../assets/Parteneri gresii/Versace Ceramics.png";
+import logoImola from "../assets/Parteneri gresii/Imola.webp";
+import logoLaFaenza from "../assets/Parteneri gresii/La Faenza.webp";
+import logoSerenissima from "../assets/Parteneri gresii/Serenissima.webp";
+import logoCir from "../assets/Parteneri gresii/Cir Ceramiche.webp";
+import logoLeonardo from "../assets/Parteneri gresii/Leonardo Ceramica.webp";
+import logoMuseum from "../assets/Parteneri gresii/Museum by Perdona.webp";
+import logoCasalgrande from "../assets/Parteneri gresii/Casalgrande Padana.webp";
+import logoStargres from "../assets/Parteneri gresii/Stargres.webp";
+import logoColorker from "../assets/Parteneri gresii/Colorker.webp";
+import logoNatucer from "../assets/Parteneri gresii/Natucer.webp";
+import logoPanaria from "../assets/Parteneri gresii/Panaria.webp";
+import logoAtlasConcorde from "../assets/Parteneri gresii/Atlas Concorde.webp";
+import logoCerrad from "../assets/Parteneri gresii/Cerrad.webp";
+import logoGardenia from "../assets/Parteneri gresii/Gardenia Orchidea.webp";
+import logoGranitoForte from "../assets/Parteneri gresii/Granito Forte.webp";
+import logoVersace from "../assets/Parteneri gresii/Versace Ceramics.webp";
 
 // Sanitare logos
-import logoVilleroy from "../assets/Parteneri sanitare/Villeroy & Boch.png";
-import logoHansgrohe from "../assets/Parteneri sanitare/Hans Grohe.png";
-import logoGrohe from "../assets/Parteneri sanitare/Grohe.png";
-import logoBathco from "../assets/Parteneri sanitare/Bathco.png";
-import logoKludi from "../assets/Parteneri sanitare/Kludi.png";
-import logoFima from "../assets/Parteneri sanitare/Fima Carlo Frattini.png";
-import logoGeberit from "../assets/Parteneri sanitare/Geberit.png";
-import logoWellis from "../assets/Parteneri sanitare/Wellis.png";
-import logoFluminia from "../assets/Parteneri sanitare/Fluminia.png";
-import logoFerro from "../assets/Parteneri sanitare/Ferro.png";
-import logoKolpa from "../assets/Parteneri sanitare/Kolpasan.png";
+import logoVilleroy from "../assets/Parteneri sanitare/Villeroy & Boch.webp";
+import logoHansgrohe from "../assets/Parteneri sanitare/Hans Grohe.webp";
+import logoGrohe from "../assets/Parteneri sanitare/Grohe.webp";
+import logoBathco from "../assets/Parteneri sanitare/Bathco.webp";
+import logoKludi from "../assets/Parteneri sanitare/Kludi.webp";
+import logoFima from "../assets/Parteneri sanitare/Fima Carlo Frattini.webp";
+import logoGeberit from "../assets/Parteneri sanitare/Geberit.webp";
+import logoWellis from "../assets/Parteneri sanitare/Wellis.webp";
+import logoFluminia from "../assets/Parteneri sanitare/Fluminia.webp";
+import logoFerro from "../assets/Parteneri sanitare/Ferro.webp";
+import logoKolpa from "../assets/Parteneri sanitare/Kolpasan.webp";
 
 type Partner = {
   name: string;

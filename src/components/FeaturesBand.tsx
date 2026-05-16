@@ -1,8 +1,8 @@
-import iconTick from "../assets/icon-tick.png";
-import iconCoin from "../assets/icon-coin.png";
-import iconDesign from "../assets/icon-design.png";
+import iconTick from "../assets/icon-tick.webp";
+import iconCoin from "../assets/icon-coin.webp";
+import iconDesign from "../assets/icon-design.webp";
 import { useScreen } from "../hooks/useScreen";
-import BlancoDark from "../assets/blanco6grm.png";
+import BlancoDark from "../assets/blanco6grm.webp";
 
 export const FeaturesBand = () => {
   const { isMobile, isTablet } = useScreen();

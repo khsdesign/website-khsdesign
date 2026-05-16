@@ -1,6 +1,6 @@
-import khsLogo from "../assets/khs-logo.png";
+import khsLogo from "../assets/khs-logo.webp";
 import { useScreen } from "../hooks/useScreen";
-import BlancoDark from "../assets/blanco6grm.png";
+import BlancoDark from "../assets/blanco6grm.webp";
 export const Header = () => {
   const { isMobile, isTablet } = useScreen();
   const v = <T,>(m: T, t: T, l: T): T => (isMobile ? m : isTablet ? t : l);

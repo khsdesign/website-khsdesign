@@ -1,5 +1,5 @@
 import LaFanezaBlancoW from "../assets/lafaenza-blanco-w.png";
-import backgroundLaptop from "../assets/background-laptop.png";
+import backgroundLaptop from "../assets/background-laptop.webp";
 import { BeforeAfterSlider } from "./BeforeAfterSlider";
 import design3dImg from "../assets/service-design3d.png";
 import transportImg from "../assets/service-transport.png";

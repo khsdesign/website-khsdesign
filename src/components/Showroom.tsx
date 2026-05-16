@@ -1,6 +1,5 @@
-import LaFanezaBlancoW from "../assets/lafaenza-blanco-w.png";
-import backgroundLaptop from "../assets/background-laptop.png";
-import backgroundShowroomMobile from "../assets/background-showroom-mobile.png";
+import backgroundLaptop from "../assets/background-laptop.webp";
+import backgroundShowroomMobile from "../assets/background-showroom-mobile.webp";
 import showroom1 from "../assets/Poze showroom/1.jpeg";
 import showroom2 from "../assets/Poze showroom/2.jpeg";
 import showroom3 from "../assets/Poze showroom/3.jpeg";
