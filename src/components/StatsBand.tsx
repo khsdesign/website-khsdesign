@@ -1,21 +1,21 @@
-import iconCustomer from "../assets/icon-customer.png";
-import iconSupport from "../assets/icon-support.png";
-import iconExperience from "../assets/icon-experience.png";
+import iconCustomer from "../assets/icon-customer.webp";
+import iconSupport from "../assets/icon-support.webp";
+import iconExperience from "../assets/icon-experience.webp";
 import { useScreen } from "../hooks/useScreen";
-import BlancoDark from "../assets/blanco6grm.png";
+import BlancoDark from "../assets/blanco6grm.webp";
 
 export const StatsBand = () => {
   const { isMobile, isTablet } = useScreen();
   const v = <T,>(m: T, t: T, l: T): T => (isMobile ? m : isTablet ? t : l);
 
-  const iconSize = v("31px", "54px", "85px");
-  const textSize = v("12px", "14px", "18px");
-  const itemGap = v("9px", "16px", "28px");
+  const iconSize = v("31px", "42px", "64px");
+  const textSize = v("12px", "13px", "16px");
+  const itemGap = v("9px", "12px", "16px");
 
   return (
     <section
       className="relative w-full"
-      style={{ height: v("75px", "109px", "149px") }}
+      style={{ height: v("75px", "95px", "95px") }}
     >
       <img
         src={BlancoDark}

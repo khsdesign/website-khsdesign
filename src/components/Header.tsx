@@ -11,22 +11,22 @@ export const Header = () => {
     <header
       className="fixed z-50 overflow-hidden rounded-[5px] flex items-center justify-between"
       style={{
-        top: v("12px", "23px", "36px"),
-        left: v("10px", "22px", "54px"),
-        right: v("10px", "22px", "54px"),
-        minHeight: isMobile ? "48px" : "clamp(48px, 5.5vw, 90px)",
+        top: v("12px", "20px", "30px"),
+        left: v("10px", "18px", "40px"),
+        right: v("10px", "18px", "40px"),
+        minHeight: isMobile ? "48px" : "clamp(48px, 4.5vw, 72px)",
         paddingLeft: fluid(
           "10px",
-          "clamp(12px, 1.8vw, 18px)",
-          "clamp(16px, 2.2vw, 36px)",
+          "clamp(10px, 1.2vw, 14px)",
+          "clamp(12px, 1.6vw, 24px)",
         ),
         paddingRight: fluid(
           "10px",
-          "clamp(12px, 1.8vw, 18px)",
-          "clamp(16px, 2.2vw, 36px)",
+          "clamp(10px, 1.2vw, 14px)",
+          "clamp(12px, 1.6vw, 24px)",
         ),
-        paddingTop: isMobile ? undefined : "clamp(3px, 0.5vw, 6px)",
-        paddingBottom: isMobile ? undefined : "clamp(3px, 0.5vw, 6px)",
+        paddingTop: isMobile ? undefined : "clamp(2px, 0.4vw, 4px)",
+        paddingBottom: isMobile ? undefined : "clamp(2px, 0.4vw, 4px)",
       }}
     >
       <img
@@ -49,8 +49,8 @@ export const Header = () => {
           style={{
             height: fluid(
               "26px",
-              "clamp(32px, 3.5vw, 40px)",
-              "clamp(44px, 4.5vw, 64px)",
+              "clamp(28px, 2.8vw, 34px)",
+              "clamp(36px, 4vw, 52px)",
             ),
           }}
         />
@@ -60,13 +60,13 @@ export const Header = () => {
         style={{
           gap: fluid(
             "10px",
+            "clamp(10px, 1.2vw, 18px)",
             "clamp(12px, 1.6vw, 28px)",
-            "clamp(16px, 2.4vw, 48px)",
           ),
           fontSize: fluid(
             "11px",
-            "clamp(13px, 1.4vw, 16px)",
-            "clamp(14px, 1.6vw, 20px)",
+            "clamp(12px, 1.1vw, 14px)",
+            "clamp(13px, 1.4vw, 18px)",
           ),
           letterSpacing: "0.03em",
         }}

@@ -8,14 +8,14 @@ export const FeaturesBand = () => {
   const { isMobile, isTablet } = useScreen();
   const v = <T,>(m: T, t: T, l: T): T => (isMobile ? m : isTablet ? t : l);
 
-  const iconSize = v("31px", "54px", "85px");
-  const textSize = v("12px", "14px", "18px");
-  const itemGap = v("4px", "12px", "28px");
+  const iconSize = v("31px", "42px", "64px");
+  const textSize = v("12px", "13px", "16px");
+  const itemGap = v("4px", "8px", "16px");
 
   return (
     <section
       className="relative w-full border-t border-[#231f20]/15"
-      style={{ height: v("75px", "109px", "149px") }}
+      style={{ height: v("75px", "95px", "95px") }}
     >
       <img
         src={BlancoDark}
