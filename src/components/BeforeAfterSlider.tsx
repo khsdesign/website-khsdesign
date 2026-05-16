@@ -24,26 +24,26 @@ export const BeforeAfterSlider = ({
   const prev = () => setCurrent((i) => (i - 1 + images.length) % images.length);
   const next = () => setCurrent((i) => (i + 1) % images.length);
 
-  return (
+  const slider = (
     <div
       className="relative rounded-[10px] overflow-hidden"
       style={{
-        marginBottom,
-        height: v("40vh", "75vh", "75vh"),
-        maxHeight: v("40vh", "75vh", "75vh"),
+        height: v("40vh", "420px", "500px"),
+        maxHeight: v("40vh", "420px", "500px"),
+        width: "100%",
       }}
     >
       <img
         src={images[current]}
         alt=""
-        className={
-          isMobile
-            ? "w-full h-auto block"
-            : "absolute inset-0 w-full h-full object-cover"
-        }
+        style={{
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          objectPosition: "center",
+        }}
       />
 
-      {/* Randare / Realitate labels */}
       <span
         className={`${tagBase} left-4 bg-[#231f20]/65 text-white`}
         style={{
@@ -63,7 +63,6 @@ export const BeforeAfterSlider = ({
         Realitate
       </span>
 
-      {/* Left arrow */}
       <button
         onClick={prev}
         className="absolute left-3 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/55 text-white rounded-full flex items-center justify-center transition-colors w-8 h-8 tablet:w-10 tablet:h-10 desktop:w-12 desktop:h-12"
@@ -84,7 +83,6 @@ export const BeforeAfterSlider = ({
         </svg>
       </button>
 
-      {/* Right arrow */}
       <button
         onClick={next}
         className="absolute right-3 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/55 text-white rounded-full flex items-center justify-center transition-colors w-8 h-8 tablet:w-10 tablet:h-10 desktop:w-12 desktop:h-12"
@@ -105,7 +103,6 @@ export const BeforeAfterSlider = ({
         </svg>
       </button>
 
-      {/* Dots */}
       <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 tablet:gap-2.5 desktop:gap-3">
         {images.map((_, i) => (
           <button
@@ -116,6 +113,40 @@ export const BeforeAfterSlider = ({
           />
         ))}
       </div>
+    </div>
+  );
+
+  return (
+    <div className="relative w-full" style={{ marginBottom }}>
+      {isMobile ? (
+        slider
+      ) : (
+        <div
+          className="relative max-w-[1512px] mx-auto grid items-center"
+          style={{ gridTemplateColumns: "30% 70%", gap: "24px" }}
+        >
+          <div className="h-full flex items-center px-4 tablet:px-6 desktop:px-8">
+            <p
+              className="text-[#231f20] leading-relaxed"
+              style={{ fontSize: "clamp(16px, 1.7vw, 20px)" }}
+            >
+              În versiunea „Before”, designul propus și rezultatul final „After”
+              sunt strâns corelate: forma, cromatica și atmosfera imaginată se
+              regăsesc foarte clar în execuția reală. Comparația dintre cele
+              două evidențiază cât de fidel poate fi transpus conceptul inițial
+              în spațiul realizat.
+            </p>
+          </div>
+
+          <div
+            style={{
+              padding: "clamp(36px, 3.2vw, 48px)",
+            }}
+          >
+            {slider}
+          </div>
+        </div>
+      )}
     </div>
   );
 };
