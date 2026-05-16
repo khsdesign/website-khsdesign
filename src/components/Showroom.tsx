@@ -109,8 +109,8 @@ export const Showroom = () => {
         <h2
           className="text-[#231f20]"
           style={{
-            fontSize: v("32px", "40px", "64px"),
-            marginBottom: v("36px", "60px", "100px"),
+            fontSize: v("32px", "34px", "44px"),
+            marginBottom: v("36px", "44px", "64px"),
           }}
         >
           Showroom
@@ -119,11 +119,11 @@ export const Showroom = () => {
         <div
           className="text-[#231f20] leading-relaxed"
           style={{
-            fontSize: v("16px", "24px", "36px"),
-            marginBottom: v("40px", "60px", "100px"),
+            fontSize: v("16px", "18px", "24px"),
+            marginBottom: v("40px", "48px", "72px"),
           }}
         >
-          <p style={{ marginBottom: v("16px", "24px", "36px") }}>
+          <p style={{ marginBottom: v("16px", "18px", "24px") }}>
             Situat strategic la frontieră, KHS Design este poarta ta către
             inovație în amenajări interioare. Aducem ultimele tendințe
             internaționale direct de la cele mai mari expoziții din lume,
@@ -132,7 +132,7 @@ export const Showroom = () => {
           </p>
           <ul
             className="list-disc"
-            style={{ paddingLeft: v("48px", "72px", "96px") }}
+            style={{ paddingLeft: v("48px", "56px", "72px") }}
           >
             <li>
               Calitate Premium: Materiale de înaltă calitate importate direct
@@ -147,13 +147,13 @@ export const Showroom = () => {
               de la rezidențial la comercial.
             </li>
           </ul>
-          <p style={{ marginTop: v("16px", "24px", "36px") }}>
+          <p style={{ marginTop: v("16px", "18px", "24px") }}>
             Vino să descoperi calitatea fără granițe și inspirația necesară
             pentru a-ți transforma viziunea în realitate!
           </p>
         </div>
 
-        <div style={{ marginBottom: v("16px", "24px", "36px") }}>
+        <div style={{ marginBottom: v("16px", "20px", "28px") }}>
           {isMobile ? (
             <div className="space-y-3">
               {mobileShowroomPhotos.map((src, index) => {
@@ -179,15 +179,15 @@ export const Showroom = () => {
               style={{
                 display: "grid",
                 gridTemplateColumns: "repeat(12, 1fr)",
-                gap: "10px",
+                gap: isTablet ? "8px" : "10px",
                 alignItems: "start",
               }}
             >
               {columns.map((col, ci) => {
                 const colStart = ci * 4 + 1;
                 // make the grid longer: larger base heights for tablet and laptop
-                // increase laptop base and make small images 66% of big ones
-                const base = isTablet ? 380 : isLaptop ? 900 : 200;
+                // reduce desktop (laptop) sizes by 50% per request
+                const base = isTablet ? 380 : isLaptop ? 450 : 200;
                 const big = Math.round(base * 1.2);
                 const small = Math.round(big * 0.66);
 

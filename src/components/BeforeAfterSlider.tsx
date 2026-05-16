@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useScreen } from "../hooks/useScreen";
 import img1 from "../assets/before-after-7.png";
 import img2 from "../assets/before-after-8.jpeg";
 import img3 from "../assets/before-after-9.jpeg";
@@ -9,13 +10,15 @@ import img6 from "../assets/before-after-12.png";
 const images = [img1, img2, img3, img4, img5, img6];
 
 const tagBase =
-  "absolute bottom-4 text-[10px] tracking-[0.14em] uppercase px-3 py-1.5 rounded-full backdrop-blur-sm select-none";
+  "absolute bottom-4 text-[10px] tablet:text-[11px] desktop:text-[12px] tracking-[0.14em] uppercase px-3 py-1.5 tablet:px-3.5 tablet:py-2 desktop:px-4 desktop:py-2.5 rounded-full backdrop-blur-sm select-none";
 
 export const BeforeAfterSlider = ({
   marginBottom,
 }: {
   marginBottom: string;
 }) => {
+  const { isMobile, isTablet } = useScreen();
+  const v = <T,>(m: T, t: T, l: T): T => (isMobile ? m : isTablet ? t : l);
   const [current, setCurrent] = useState(0);
 
   const prev = () => setCurrent((i) => (i - 1 + images.length) % images.length);
@@ -24,15 +27,39 @@ export const BeforeAfterSlider = ({
   return (
     <div
       className="relative rounded-[10px] overflow-hidden"
-      style={{ marginBottom }}
+      style={{
+        marginBottom,
+        height: v("auto", "75vh", "75vh"),
+        maxHeight: v("none", "75vh", "75vh"),
+      }}
     >
-      <img src={images[current]} alt="" className="w-full h-auto block" />
+      <img
+        src={images[current]}
+        alt=""
+        className={
+          isMobile
+            ? "w-full h-auto block"
+            : "absolute inset-0 w-full h-full object-cover"
+        }
+      />
 
       {/* Randare / Realitate labels */}
-      <span className={`${tagBase} left-4 bg-[#231f20]/65 text-white`}>
+      <span
+        className={`${tagBase} left-4 bg-[#231f20]/65 text-white`}
+        style={{
+          fontSize: v("10px", "12px", "14px"),
+          padding: v("6px 12px", "8px 14px", "10px 16px"),
+        }}
+      >
         Randare
       </span>
-      <span className={`${tagBase} right-4 bg-white/80 text-[#231f20]`}>
+      <span
+        className={`${tagBase} right-4 bg-white/80 text-[#231f20]`}
+        style={{
+          fontSize: v("10px", "12px", "14px"),
+          padding: v("6px 12px", "8px 14px", "10px 16px"),
+        }}
+      >
         Realitate
       </span>
 
@@ -79,12 +106,12 @@ export const BeforeAfterSlider = ({
       </button>
 
       {/* Dots */}
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 tablet:gap-2.5 desktop:gap-3">
         {images.map((_, i) => (
           <button
             key={i}
             onClick={() => setCurrent(i)}
-            className={`rounded-full transition-all ${i === current ? "bg-white w-3 h-3" : "bg-white/50 w-2 h-2"}`}
+            className={`rounded-full transition-all ${i === current ? "bg-white w-3 h-3 tablet:w-3.5 tablet:h-3.5 desktop:w-4 desktop:h-4" : "bg-white/50 w-2 h-2 tablet:w-2.5 tablet:h-2.5 desktop:w-3 desktop:h-3"}`}
             aria-label={`Imaginea ${i + 1}`}
           />
         ))}

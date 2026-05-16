@@ -1,4 +1,5 @@
 import heroBg from "../assets/hero-background.jpeg";
+import heroBgDesktop from "../assets/hero-background-laptop.png";
 import { useScreen } from "../hooks/useScreen";
 
 export const Hero = () => {
@@ -6,8 +7,19 @@ export const Hero = () => {
   const v = <T,>(m: T, t: T, l: T): T => (isMobile ? m : isTablet ? t : l);
 
   return (
-    <section className="relative w-full">
-      <img src={heroBg} alt="" className="w-full h-auto block" />
+    <section
+      className="relative w-full"
+      style={{ minHeight: v("auto", "80vh", "100vh") }}
+    >
+      <img
+        src={isMobile ? heroBg : heroBgDesktop}
+        alt=""
+        className={
+          isMobile
+            ? "w-full h-auto block"
+            : "absolute inset-0 w-full h-full object-cover"
+        }
+      />
       <div className="absolute inset-0 flex items-center justify-center">
         <h1
           className="text-black text-center leading-normal"

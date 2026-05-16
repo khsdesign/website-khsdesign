@@ -9,7 +9,7 @@ export const FeaturesBand = () => {
   const v = <T,>(m: T, t: T, l: T): T => (isMobile ? m : isTablet ? t : l);
 
   const iconSize = v("31px", "54px", "85px");
-  const textSize = v("12px", "16px", "24px");
+  const textSize = v("12px", "14px", "18px");
   const itemGap = v("4px", "12px", "28px");
 
   return (
@@ -22,12 +22,20 @@ export const FeaturesBand = () => {
         alt=""
         className="absolute inset-0 w-full h-full object-cover"
       />
-      <div className="relative h-full flex items-center justify-around px-5 tablet:px-10 desktop:px-20 text-[#231f20]">
-        <div className="flex items-center" style={{ gap: itemGap }}>
+      <div className="relative h-full grid grid-cols-3 items-center px-5 tablet:px-10 desktop:px-20 text-[#231f20]">
+        <div
+          className="flex items-center justify-self-center"
+          style={{ gap: itemGap }}
+        >
           <img
             src={iconTick}
             alt=""
-            style={{ width: iconSize, height: iconSize, flexShrink: 0, filter: "brightness(0)" }}
+            style={{
+              width: iconSize,
+              height: iconSize,
+              flexShrink: 0,
+              filter: "brightness(0)",
+            }}
           />
           <div
             className="leading-tight font-bold"
@@ -37,11 +45,19 @@ export const FeaturesBand = () => {
             <p>înaltă</p>
           </div>
         </div>
-        <div className="flex items-center" style={{ gap: itemGap }}>
+        <div
+          className="flex items-center justify-self-center"
+          style={{ gap: itemGap }}
+        >
           <img
             src={iconCoin}
             alt=""
-            style={{ width: iconSize, height: iconSize, flexShrink: 0, filter: "brightness(0)" }}
+            style={{
+              width: iconSize,
+              height: iconSize,
+              flexShrink: 0,
+              filter: "brightness(0)",
+            }}
           />
           <div
             className="leading-tight font-bold"
@@ -51,11 +67,19 @@ export const FeaturesBand = () => {
             <p>accesibile</p>
           </div>
         </div>
-        <div className="flex items-center" style={{ gap: itemGap }}>
+        <div
+          className="flex items-center justify-self-center"
+          style={{ gap: itemGap }}
+        >
           <img
             src={iconDesign}
             alt=""
-            style={{ width: iconSize, height: iconSize, flexShrink: 0, filter: "brightness(0)" }}
+            style={{
+              width: iconSize,
+              height: iconSize,
+              flexShrink: 0,
+              filter: "brightness(0)",
+            }}
           />
           <div
             className="leading-tight font-bold"

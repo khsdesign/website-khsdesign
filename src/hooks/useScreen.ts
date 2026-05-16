@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 
-const TABLET = 834;
-const LAPTOP = 1512;
+// Standardized breakpoints: mobile < 768, tablet 768-1279, laptop >= 1280
+const TABLET = 768;
+const LAPTOP = 1024;
 
 export const useScreen = () => {
   const [width, setWidth] = useState(() => window.innerWidth);

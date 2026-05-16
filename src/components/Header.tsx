@@ -4,6 +4,8 @@ import BlancoDark from "../assets/blanco6grm.png";
 export const Header = () => {
   const { isMobile, isTablet } = useScreen();
   const v = <T,>(m: T, t: T, l: T): T => (isMobile ? m : isTablet ? t : l);
+  const fluid = (mobile: string, tablet: string, laptop: string) =>
+    isMobile ? mobile : isTablet ? tablet : laptop;
 
   return (
     <header
@@ -12,9 +14,19 @@ export const Header = () => {
         top: v("12px", "23px", "36px"),
         left: v("10px", "22px", "54px"),
         right: v("10px", "22px", "54px"),
-        height: v("48px", "71px", "121px"),
-        paddingLeft: v("10px", "22px", "54px"),
-        paddingRight: v("10px", "22px", "54px"),
+        minHeight: isMobile ? "48px" : "clamp(48px, 5.5vw, 90px)",
+        paddingLeft: fluid(
+          "10px",
+          "clamp(12px, 1.8vw, 18px)",
+          "clamp(16px, 2.2vw, 36px)",
+        ),
+        paddingRight: fluid(
+          "10px",
+          "clamp(12px, 1.8vw, 18px)",
+          "clamp(16px, 2.2vw, 36px)",
+        ),
+        paddingTop: isMobile ? undefined : "clamp(3px, 0.5vw, 6px)",
+        paddingBottom: isMobile ? undefined : "clamp(3px, 0.5vw, 6px)",
       }}
     >
       <img
@@ -34,14 +46,28 @@ export const Header = () => {
           src={khsLogo}
           alt="KHS"
           className="w-auto"
-          style={{ height: v("26px", "45px", "79px") }}
+          style={{
+            height: fluid(
+              "26px",
+              "clamp(32px, 3.5vw, 40px)",
+              "clamp(44px, 4.5vw, 64px)",
+            ),
+          }}
         />
       </a>
       <nav
-        className="flex text-white relative"
+        className="flex items-center whitespace-nowrap text-white relative"
         style={{
-          gap: v("13px", "47px", "83px"),
-          fontSize: v("11px", "20px", "36px"),
+          gap: fluid(
+            "10px",
+            "clamp(12px, 1.6vw, 28px)",
+            "clamp(16px, 2.4vw, 48px)",
+          ),
+          fontSize: fluid(
+            "11px",
+            "clamp(13px, 1.4vw, 16px)",
+            "clamp(14px, 1.6vw, 20px)",
+          ),
           letterSpacing: "0.03em",
         }}
       >

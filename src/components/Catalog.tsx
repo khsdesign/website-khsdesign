@@ -409,10 +409,10 @@ export const Catalog = () => {
 
   const gridCols = v("repeat(3, 1fr)", "repeat(3, 1fr)", "repeat(5, 1fr)");
   const gridGap = v("8px", "16px", "24px");
-  const categoryTitleSize = v("20px", "28px", "40px");
-  const categoryMargin = v("16px", "24px", "36px");
-  const sectionMargin = v("40px", "64px", "100px");
-  const buttonSize = v("13px", "16px", "20px");
+  const categoryTitleSize = v("20px", "24px", "32px");
+  const categoryMargin = v("16px", "20px", "28px");
+  const sectionMargin = v("40px", "56px", "80px");
+  const buttonSize = v("13px", "14px", "16px");
 
   return (
     <>
@@ -439,8 +439,8 @@ export const Catalog = () => {
           <h2
             className="text-[#231f20]"
             style={{
-              fontSize: v("32px", "40px", "64px"),
-              marginBottom: v("12px", "20px", "28px"),
+              fontSize: v("32px", "34px", "44px"),
+              marginBottom: v("12px", "16px", "22px"),
             }}
           >
             CATALOG
@@ -449,8 +449,8 @@ export const Catalog = () => {
           <p
             className="text-[#231f20]/70 leading-relaxed"
             style={{
-              fontSize: v("14px", "18px", "24px"),
-              marginBottom: v("36px", "60px", "100px"),
+              fontSize: v("14px", "16px", "20px"),
+              marginBottom: v("36px", "48px", "72px"),
             }}
           >
             Explorează colecțiile complete ale partenerilor noștri

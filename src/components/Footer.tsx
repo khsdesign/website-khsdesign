@@ -12,246 +12,246 @@ export const Footer = () => {
   const v = <T,>(m: T, t: T, l: T): T => (isMobile ? m : isTablet ? t : l);
 
   return (
-    <footer id="contact" className="relative w-full overflow-hidden text-black">
+    <footer
+      id="contact"
+      className="relative w-full overflow-hidden text-black"
+      style={{ minHeight: v("auto", "80vh", "80vh") }}
+    >
       <img
         src={BlancoDark}
         alt=""
-        className="absolute object-cover h-full w-full inset-0"
+        className="absolute inset-0 h-full w-full object-cover"
       />
       <div
-        className="relative max-w-[1512px] mx-auto"
+        className="relative mx-auto flex min-h-full max-w-[1512px] flex-col"
         style={{
-          paddingLeft: v("27px", "48px", "80px"),
-          paddingRight: v("27px", "48px", "80px"),
-          paddingTop: v("15px", "32px", "64px"),
-          paddingBottom: v("20px", "40px", "80px"),
+          paddingLeft: v("27px", "42px", "64px"),
+          paddingRight: v("27px", "42px", "64px"),
+          paddingTop: v("14px", "20px", "28px"),
+          paddingBottom: v("14px", "20px", "28px"),
         }}
       >
-        {/* Logo & Tagline */}
-        <div
-          className="text-center"
-          style={{ marginBottom: v("37px", "56px", "80px") }}
-        >
-          <img
-            src={khsLogo}
-            alt="KHS"
-            className="mx-auto rounded-[5px]"
-            style={{
-              height: v("43px", "83px", "137px"),
-              width: "auto",
-              marginBottom: v("9px", "16px", "28px"),
-            }}
-          />
-          <p style={{ fontSize: v("14px", "20px", "28px") }}>
-            Nu calitatea costă, ci lipsa ei.
-          </p>
-        </div>
+        <div className="flex flex-1 flex-col gap-4 md:gap-6">
+          <div className="flex flex-col items-center gap-4 text-center md:gap-5">
+            <div className="text-center">
+              <img
+                src={khsLogo}
+                alt="KHS"
+                className="mx-auto rounded-[5px]"
+                style={{
+                  height: v("26px", "34px", "42px"),
+                  width: "auto",
+                  marginBottom: v("4px", "6px", "8px"),
+                }}
+              />
+              <p style={{ fontSize: v("13px", "15px", "16px") }}>
+                Nu calitatea costă, ci lipsa ei.
+              </p>
+            </div>
 
-        {/* Social Media */}
-        <div
-          className="flex justify-center"
-          style={{
-            gap: v("24px", "40px", "64px"),
-            marginBottom: v("37px", "56px", "80px"),
-          }}
-        >
-          <a
-            href="https://www.tiktok.com/@khsdesign?_r=1&_t=ZN-96J4oSlHExi"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src={iconTiktok}
-              alt="TikTok"
-              className="hover:opacity-70 transition-opacity brightness-0"
-              style={{
-                width: v("24px", "50px", "87px"),
-                height: v("24px", "50px", "87px"),
-              }}
-            />
-          </a>
-          <a
-            href="https://www.instagram.com/_khsdesign/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src={iconInstagram}
-              alt="Instagram"
-              className="hover:opacity-70 transition-opacity brightness-0"
-              style={{
-                width: v("24px", "50px", "87px"),
-                height: v("24px", "50px", "87px"),
-              }}
-            />
-          </a>
-          <a
-            href="https://www.facebook.com/profile.php?id=100064758679069"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src={iconFacebook}
-              alt="Facebook"
-              className="hover:opacity-70 transition-opacity brightness-0"
-              style={{
-                width: v("24px", "50px", "87px"),
-                height: v("24px", "50px", "87px"),
-              }}
-            />
-          </a>
-        </div>
-
-        {/* Contact, Program, Map */}
-        <div
-          className="grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-3"
-          style={{
-            gap: v("30px", "48px", "80px"),
-            marginBottom: v("20px", "36px", "60px"),
-          }}
-        >
-          {/* Contact */}
-          <div>
-            <h3
-              className="text-black"
-              style={{
-                fontSize: v("20px", "32px", "48px"),
-                marginBottom: v("12px", "20px", "32px"),
-              }}
-            >
-              CONTACT
-            </h3>
             <div
-              className="text-black"
-              style={{ fontSize: v("13px", "24px", "36px") }}
+              className="flex justify-center"
+              style={{ gap: v("12px", "16px", "22px") }}
             >
-              <div
-                className="flex items-center"
-                style={{
-                  gap: v("14px", "20px", "32px"),
-                  marginBottom: v("10px", "16px", "24px"),
-                }}
-              >
-                <img
-                  src={iconPhone}
-                  alt=""
-                  className="brightness-0"
-                  style={{
-                    width: v("27px", "48px", "83px"),
-                    height: v("27px", "48px", "83px"),
-                    flexShrink: 0,
-                  }}
-                />
-                <p>0735450650 - Cristina (Achiziții)</p>
-              </div>
-              <div
-                className="flex items-center"
-                style={{
-                  gap: v("14px", "20px", "32px"),
-                  marginBottom: v("10px", "16px", "24px"),
-                }}
-              >
-                <img
-                  src={iconPhone}
-                  alt=""
-                  className="brightness-0"
-                  style={{
-                    width: v("27px", "48px", "83px"),
-                    height: v("27px", "48px", "83px"),
-                    flexShrink: 0,
-                  }}
-                />
-                <p>0744158868 - Alexa (Design)</p>
-              </div>
               <a
-                href="https://maps.app.goo.gl/Y2s5uE81NCGY36St5"
+                href="https://www.tiktok.com/@khsdesign?_r=1&_t=ZN-96J4oSlHExi"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-start hover:opacity-70 transition-opacity"
-                style={{ gap: v("14px", "20px", "32px") }}
               >
                 <img
-                  src={iconPin}
-                  alt=""
-                  className="brightness-0"
+                  src={iconTiktok}
+                  alt="TikTok"
+                  className="brightness-0 transition-opacity hover:opacity-70"
                   style={{
-                    width: v("20px", "41px", "76px"),
-                    height: v("27px", "48px", "83px"),
-                    flexShrink: 0,
-                    marginTop: "0.25em",
+                    width: v("16px", "18px", "24px"),
+                    height: v("16px", "18px", "24px"),
                   }}
                 />
-                <div>
-                  <p
-                    style={{
-                      fontSize: v("15px", "26px", "40px"),
-                      marginBottom: "0.25em",
-                    }}
-                  >
-                    Str. Aurel Vlaicu Nr. 100
-                  </p>
-                  <p style={{ fontSize: v("13px", "24px", "36px") }}>
-                    Deschide în Google Maps —
-                  </p>
-                </div>
+              </a>
+              <a
+                href="https://www.instagram.com/_khsdesign/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={iconInstagram}
+                  alt="Instagram"
+                  className="brightness-0 transition-opacity hover:opacity-70"
+                  style={{
+                    width: v("16px", "18px", "24px"),
+                    height: v("16px", "18px", "24px"),
+                  }}
+                />
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=100064758679069"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={iconFacebook}
+                  alt="Facebook"
+                  className="brightness-0 transition-opacity hover:opacity-70"
+                  style={{
+                    width: v("16px", "18px", "24px"),
+                    height: v("16px", "18px", "24px"),
+                  }}
+                />
               </a>
             </div>
           </div>
 
-          {/* Program */}
-          <div>
-            <h3
-              className="text-black"
-              style={{
-                fontSize: v("20px", "32px", "48px"),
-                marginBottom: v("12px", "20px", "32px"),
-              }}
-            >
-              PROGRAM
-            </h3>
+          <div
+            className="mt-auto grid grid-cols-1 items-end md:grid-cols-2 md:items-end"
+            style={{
+              gap: v("18px", "24px", "30px"),
+              marginBottom: v("10px", "12px", "14px"),
+            }}
+          >
             <div
-              className="text-black"
-              style={{ fontSize: v("13px", "24px", "36px") }}
+              className="flex w-full flex-col justify-end"
+              style={{ gap: v("12px", "14px", "18px") }}
             >
-              <p style={{ marginBottom: v("4px", "8px", "12px") }}>
-                Luni - Vineri: 08:00 - 17:00
-              </p>
-              <p style={{ marginBottom: v("4px", "8px", "12px") }}>
-                Sâmbătă: închis
-              </p>
-              <p>Duminică: închis</p>
+              <div>
+                <h3
+                  className="text-black"
+                  style={{
+                    fontSize: v("15px", "18px", "24px"),
+                    marginBottom: v("7px", "8px", "12px"),
+                  }}
+                >
+                  CONTACT
+                </h3>
+                <div
+                  className="text-black"
+                  style={{ fontSize: v("11px", "13px", "16px") }}
+                >
+                  <div
+                    className="flex items-center"
+                    style={{
+                      gap: v("9px", "10px", "14px"),
+                      marginBottom: v("5px", "6px", "8px"),
+                    }}
+                  >
+                    <img
+                      src={iconPhone}
+                      alt=""
+                      className="brightness-0"
+                      style={{
+                        width: v("16px", "20px", "28px"),
+                        height: v("16px", "20px", "28px"),
+                        flexShrink: 0,
+                      }}
+                    />
+                    <p>0735450650 - Cristina (Achiziții)</p>
+                  </div>
+                  <div
+                    className="flex items-center"
+                    style={{
+                      gap: v("9px", "10px", "14px"),
+                      marginBottom: v("5px", "6px", "8px"),
+                    }}
+                  >
+                    <img
+                      src={iconPhone}
+                      alt=""
+                      className="brightness-0"
+                      style={{
+                        width: v("16px", "20px", "28px"),
+                        height: v("16px", "20px", "28px"),
+                        flexShrink: 0,
+                      }}
+                    />
+                    <p>0744158868 - Alexa (Design)</p>
+                  </div>
+                  <a
+                    href="https://maps.app.goo.gl/Y2s5uE81NCGY36St5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-start transition-opacity hover:opacity-70"
+                    style={{ gap: v("9px", "10px", "14px") }}
+                  >
+                    <img
+                      src={iconPin}
+                      alt=""
+                      className="brightness-0"
+                      style={{
+                        width: v("14px", "18px", "24px"),
+                        height: v("16px", "20px", "28px"),
+                        flexShrink: 0,
+                        marginTop: "0.25em",
+                      }}
+                    />
+                    <div>
+                      <p
+                        style={{
+                          fontSize: v("11px", "13px", "16px"),
+                          marginBottom: "0.25em",
+                        }}
+                      >
+                        Str. Aurel Vlaicu Nr. 100
+                      </p>
+                      <p style={{ fontSize: v("11px", "13px", "16px") }}>
+                        Deschide în Google Maps —
+                      </p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div>
+                <h3
+                  className="text-black"
+                  style={{
+                    fontSize: v("15px", "18px", "24px"),
+                    marginBottom: v("7px", "8px", "12px"),
+                  }}
+                >
+                  PROGRAM
+                </h3>
+                <div
+                  className="text-black"
+                  style={{ fontSize: v("11px", "13px", "16px") }}
+                >
+                  <p style={{ marginBottom: v("3px", "4px", "6px") }}>
+                    Luni - Vineri: 08:00 - 17:00
+                  </p>
+                  <p style={{ marginBottom: v("3px", "4px", "6px") }}>
+                    Sâmbătă: închis
+                  </p>
+                  <p>Duminică: închis</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="w-full md:h-full md:self-end">
+              <iframe
+                src="https://maps.google.com/maps?q=Str.+Aurel+Vlaicu+Nr.+100,+Satu+Mare,+Romania&output=embed"
+                width="100%"
+                height="100%"
+                style={{
+                  border: 0,
+                  borderRadius: "5px",
+                  minHeight: v("140px", "180px", "220px"),
+                  display: "block",
+                }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="KHS Design Location"
+              />
             </div>
           </div>
 
-          {/* Map */}
-          <div className="tablet:col-span-2 desktop:col-span-1">
-            <iframe
-              src="https://maps.google.com/maps?q=Str.+Aurel+Vlaicu+Nr.+100,+Satu+Mare,+Romania&output=embed"
-              width="100%"
-              height="100%"
-              style={{
-                border: 0,
-                borderRadius: "5px",
-                minHeight: v("200px", "260px", "320px"),
-                display: "block",
-              }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="KHS Design Location"
-            />
+          <div
+            className="border-t border-[#231f20]/20 text-center text-black"
+            style={{
+              fontSize: v("11px", "12px", "14px"),
+              paddingTop: v("6px", "8px", "10px"),
+            }}
+          >
+            <p>© 2026 KHS. Toate drepturile rezervate.</p>
           </div>
-        </div>
-
-        {/* Copyright */}
-        <div
-          className="text-center text-black border-t border-[#231f20]/20"
-          style={{
-            fontSize: v("13px", "24px", "36px"),
-            paddingTop: v("8px", "12px", "24px"),
-          }}
-        >
-          <p>© 2026 KHS. Toate drepturile rezervate.</p>
         </div>
       </div>
     </footer>

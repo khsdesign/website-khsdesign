@@ -9,7 +9,7 @@ export const LastBand = () => {
   const v = <T,>(m: T, t: T, l: T): T => (isMobile ? m : isTablet ? t : l);
 
   const iconSize = v("31px", "54px", "85px");
-  const textSize = v("12px", "16px", "24px");
+  const textSize = v("12px", "14px", "18px");
   const itemGap = v("9px", "16px", "28px");
 
   return (
@@ -23,13 +23,16 @@ export const LastBand = () => {
         className="absolute inset-0 w-full h-full object-cover"
       />
       <div
-        className="relative h-full flex items-center justify-around text-[#231f20]"
+        className="relative h-full grid grid-cols-3 items-center text-[#231f20]"
         style={{
           paddingLeft: v("20px", "40px", "80px"),
           paddingRight: v("20px", "40px", "80px"),
         }}
       >
-        <div className="flex items-center" style={{ gap: itemGap }}>
+        <div
+          className="flex items-center justify-self-center"
+          style={{ gap: itemGap }}
+        >
           <img
             src={iconRarity}
             alt=""
@@ -37,8 +40,7 @@ export const LastBand = () => {
               width: iconSize,
               height: iconSize,
               flexShrink: 0,
-              //   filter: "brightness(0) invert(1)",
-              color: "black",
+              filter: "brightness(0)",
             }}
           />
           <div
@@ -49,7 +51,10 @@ export const LastBand = () => {
             <p>unicat</p>
           </div>
         </div>
-        <div className="flex items-center" style={{ gap: itemGap }}>
+        <div
+          className="flex items-center justify-self-center"
+          style={{ gap: itemGap }}
+        >
           <img
             src={iconAdaptability}
             alt=""
@@ -57,8 +62,7 @@ export const LastBand = () => {
               width: iconSize,
               height: iconSize,
               flexShrink: 0,
-              //   filter: "brightness(0) invert(1)",
-              color: "black",
+              filter: "brightness(0)",
             }}
           />
           <div
@@ -69,7 +73,10 @@ export const LastBand = () => {
             <p>adaptabile</p>
           </div>
         </div>
-        <div className="flex items-center" style={{ gap: itemGap }}>
+        <div
+          className="flex items-center justify-self-center"
+          style={{ gap: itemGap }}
+        >
           <img
             src={iconTrend}
             alt=""
@@ -77,8 +84,7 @@ export const LastBand = () => {
               width: iconSize,
               height: iconSize,
               flexShrink: 0,
-              //   filter: "brightness(0) invert(1)",
-              color: "black",
+              filter: "brightness(0)",
             }}
           />
           <div
