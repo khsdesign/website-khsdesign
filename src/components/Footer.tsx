@@ -175,7 +175,7 @@ export const Footer = () => {
                   alt=""
                   className="brightness-0"
                   style={{
-                    width: v("27px", "48px", "83px"),
+                    width: v("20px", "41px", "76px"),
                     height: v("27px", "48px", "83px"),
                     flexShrink: 0,
                     marginTop: "0.25em",
