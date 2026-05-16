@@ -43,7 +43,7 @@ export const Footer = () => {
             }}
           />
           <p style={{ fontSize: v("14px", "20px", "28px") }}>
-            Transformăm spații în experiențe de neuitat.
+            Nu calitatea costă, ci lipsa ei.
           </p>
         </div>
 

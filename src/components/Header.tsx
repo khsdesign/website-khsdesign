@@ -20,7 +20,7 @@ export const Header = () => {
       <img
         src={BlancoDark}
         alt=""
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover opacity-90"
       />
       <a
         href="#"
