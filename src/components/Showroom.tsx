@@ -1,4 +1,6 @@
 import LaFanezaBlancoW from "../assets/lafaenza-blanco-w.png";
+import backgroundLaptop from "../assets/background-laptop.png";
+import backgroundShowroomMobile from "../assets/background-showroom-mobile.png";
 import showroom1 from "../assets/Poze showroom/1.jpeg";
 import showroom2 from "../assets/Poze showroom/2.jpeg";
 import showroom3 from "../assets/Poze showroom/3.jpeg";
@@ -92,7 +94,7 @@ export const Showroom = () => {
   return (
     <section id="showroom" className="relative w-full overflow-hidden">
       <img
-        src={LaFanezaBlancoW}
+        src={isMobile ? backgroundShowroomMobile : backgroundLaptop}
         alt=""
         className="absolute inset-0 w-full h-full object-cover"
       />

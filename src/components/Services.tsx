@@ -1,4 +1,5 @@
 import LaFanezaBlancoW from "../assets/lafaenza-blanco-w.png";
+import backgroundLaptop from "../assets/background-laptop.png";
 import { BeforeAfterSlider } from "./BeforeAfterSlider";
 import design3dImg from "../assets/service-design3d.png";
 import transportImg from "../assets/service-transport.png";
@@ -12,7 +13,7 @@ export const Services = () => {
   return (
     <section id="servicii" className="relative w-full overflow-hidden">
       <img
-        src={LaFanezaBlancoW}
+        src={isMobile ? LaFanezaBlancoW : backgroundLaptop}
         alt=""
         className="absolute inset-0 w-full h-full object-cover object-center"
       />

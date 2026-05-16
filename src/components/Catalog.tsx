@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import LaFanezaBlancoW from "../assets/lafaenza-blanco-w.png";
+import backgroundLaptop from "../assets/background-laptop.png";
 import { useScreen } from "../hooks/useScreen";
 
 // Gresie logos
@@ -425,7 +426,7 @@ export const Catalog = () => {
         }}
       >
         <img
-          src={LaFanezaBlancoW}
+          src={isMobile ? LaFanezaBlancoW : backgroundLaptop}
           alt=""
           className="absolute inset-0 w-full h-full object-cover"
         />
