@@ -16,12 +16,12 @@ export const Header = () => {
         right: v("10px", "18px", "40px"),
         minHeight: isMobile ? "48px" : "clamp(48px, 4.5vw, 72px)",
         paddingLeft: fluid(
-          "10px",
+          "8px",
           "clamp(10px, 1.2vw, 14px)",
           "clamp(12px, 1.6vw, 24px)",
         ),
         paddingRight: fluid(
-          "10px",
+          "8px",
           "clamp(10px, 1.2vw, 14px)",
           "clamp(12px, 1.6vw, 24px)",
         ),
@@ -64,12 +64,12 @@ export const Header = () => {
         className="flex items-center whitespace-nowrap text-white relative"
         style={{
           gap: fluid(
-            "10px",
+            "4px",
             "clamp(10px, 1.2vw, 18px)",
             "clamp(12px, 1.6vw, 28px)",
           ),
           fontSize: fluid(
-            "11px",
+            "10px",
             "clamp(12px, 1.1vw, 14px)",
             "clamp(13px, 1.4vw, 18px)",
           ),
