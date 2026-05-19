@@ -8,6 +8,8 @@ import { Showroom } from "./components/Showroom";
 import { Catalog } from "./components/Catalog";
 import { Footer } from "./components/Footer";
 import { LastBand } from "./components/LastBand";
+import { OurTeam } from "./components/OurTeam";
+import { Delimitator } from "./components/Delimitator";
 // import { useScreen } from "./hooks/useScreen";
 
 const App = () => {
@@ -38,6 +40,8 @@ const App = () => {
       </div> */}
 
       <Catalog />
+      <Delimitator />
+      <OurTeam />
       <Footer />
     </div>
   );

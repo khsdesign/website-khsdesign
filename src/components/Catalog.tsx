@@ -20,6 +20,8 @@ import logoCerrad from "../assets/Parteneri gresii/Cerrad.webp";
 import logoGardenia from "../assets/Parteneri gresii/Gardenia Orchidea.webp";
 import logoGranitoForte from "../assets/Parteneri gresii/Granito Forte.webp";
 import logoVersace from "../assets/Parteneri gresii/Versace Ceramics.webp";
+import logoFlorida from "../assets/Parteneri gresii/Florida.webp";
+import logoCotto from "../assets/Parteneri gresii/Cotto D'este.webp";
 
 // Sanitare logos
 import logoVilleroy from "../assets/Parteneri sanitare/Villeroy & Boch.webp";
@@ -67,6 +69,11 @@ const gresiiBestSellers: Partner[] = [
     name: "LEONARDO CERAMICA",
     url: "https://leonardoceramica.com/en/",
     logo: logoLeonardo,
+  },
+  {
+    name: "COTTO D'ESTE",
+    url: "https://www.cottodeste.com/",
+    logo: logoCotto,
   },
   {
     name: "MUSEUM BY PERONDA",
@@ -164,7 +171,11 @@ const sanitareBestSellers: Partner[] = [
 ];
 
 const sanitareMore: Partner[] = [
-  { name: "FLORIDA", url: "https://www.jollycluj.ro/Brand_Florida_46.html" },
+  {
+    name: "FLORIDA",
+    url: "https://www.jollycluj.ro/Brand_Florida_46.html",
+    logo: logoFlorida,
+  },
   {
     name: "FLUMINIA",
     url: "https://www.jollycluj.ro/Brand_Fluminia_87.html",

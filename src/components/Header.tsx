@@ -90,6 +90,12 @@ export const Header = () => {
           CATALOG
         </a>
         <a
+          href="#echipa-noastra"
+          className="hover:opacity-70 transition-opacity text-black"
+        >
+          ECHIPA
+        </a>
+        <a
           href="#contact"
           className="hover:opacity-70 transition-opacity text-black"
         >
