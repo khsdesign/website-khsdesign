@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import LaFanezaBlancoW from "../assets/lafaenza-blanco-w.webp";
 import backgroundLaptop from "../assets/background-laptop.webp";
+import BlancoDark from "../assets/blanco6grm.webp";
 import { useScreen } from "../hooks/useScreen";
 
 // Gresie logos
@@ -277,7 +278,7 @@ const SelectieModal = ({
 const CardInner = ({ partner }: { partner: Partner }) => (
   <>
     {partner.selectie && (
-      <span className="absolute top-0 right-0 bg-[#231f20]/8 text-[#231f20]/40 text-[9px] tracking-widest uppercase px-2 py-1 rounded-bl-[8px]">
+      <span className="absolute top-0 right-0 bg-[#231f20] text-white text-[9px] tracking-widest uppercase px-2 py-1 rounded-bl-[8px]">
         Selecție
       </span>
     )}
@@ -320,7 +321,14 @@ const PartnerCard = ({
         className={`${baseClass} w-full`}
         style={{ aspectRatio: "1/1" }}
       >
-        <CardInner partner={partner} />
+        <img
+          src={BlancoDark}
+          alt=""
+          className="absolute inset-0 h-full w-full object-cover pointer-events-none"
+        />
+        <div className="relative z-10 w-full h-full flex flex-col items-center justify-center">
+          <CardInner partner={partner} />
+        </div>
       </button>
     );
   }
@@ -333,7 +341,14 @@ const PartnerCard = ({
       className={baseClass}
       style={{ aspectRatio: "1/1" }}
     >
-      <CardInner partner={partner} />
+      <img
+        src={BlancoDark}
+        alt=""
+        className="absolute inset-0 h-full w-full object-cover pointer-events-none"
+      />
+      <div className="relative z-10 w-full h-full flex flex-col items-center justify-center">
+        <CardInner partner={partner} />
+      </div>
     </a>
   );
 };
