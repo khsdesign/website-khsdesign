@@ -39,6 +39,11 @@ export const Header = () => {
         onClick={(e) => {
           e.preventDefault();
           window.scrollTo({ top: 0, behavior: "smooth" });
+          history.replaceState(
+            null,
+            "",
+            window.location.pathname + window.location.search,
+          );
         }}
         className="relative"
       >
@@ -48,7 +53,7 @@ export const Header = () => {
           className="w-auto"
           style={{
             height: fluid(
-              "26px",
+              "20px",
               "clamp(28px, 2.8vw, 34px)",
               "clamp(36px, 4vw, 52px)",
             ),
@@ -71,36 +76,32 @@ export const Header = () => {
           letterSpacing: "0.03em",
         }}
       >
-        <a
-          href="#servicii"
-          className="hover:opacity-70 transition-opacity text-black"
-        >
-          SERVICII
-        </a>
-        <a
-          href="#showroom"
-          className="hover:opacity-70 transition-opacity text-black"
-        >
-          SHOWROOM
-        </a>
-        <a
-          href="#catalog"
-          className="hover:opacity-70 transition-opacity text-black"
-        >
-          CATALOG
-        </a>
-        <a
-          href="#echipa-noastra"
-          className="hover:opacity-70 transition-opacity text-black"
-        >
-          ECHIPA
-        </a>
-        <a
-          href="#contact"
-          className="hover:opacity-70 transition-opacity text-black"
-        >
-          CONTACT
-        </a>
+        {[
+          ["servicii", "SERVICII"],
+          ["showroom", "SHOWROOM"],
+          ["catalog", "CATALOG"],
+          ["echipa-noastra", "ECHIPA"],
+          ["contact", "CONTACT"],
+        ].map(([id, label]) => (
+          <a
+            key={id}
+            href={`#${id}`}
+            onClick={(e) => {
+              e.preventDefault();
+              const el = document.getElementById(id as string);
+              if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+              else window.scrollTo({ top: 0, behavior: "smooth" });
+              history.replaceState(
+                null,
+                "",
+                window.location.pathname + window.location.search,
+              );
+            }}
+            className="hover:opacity-70 transition-opacity text-black"
+          >
+            {label}
+          </a>
+        ))}
       </nav>
     </header>
   );

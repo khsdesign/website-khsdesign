@@ -3,7 +3,7 @@ import backgroundLaptop from "../assets/background-laptop.webp";
 import { BeforeAfterSlider } from "./BeforeAfterSlider";
 import design3dImg from "../assets/service-design3d.webp";
 import transportImg from "../assets/service-transport.webp";
-import cncImg from "../assets/service-cnc.webp";
+import cncImg from "../assets/pozacnc.webp";
 import { useScreen } from "../hooks/useScreen";
 
 export const Services = () => {
