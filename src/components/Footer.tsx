@@ -45,7 +45,7 @@ export const Footer = () => {
                 }}
               />
               <p style={{ fontSize: v("13px", "15px", "16px") }}>
-                Nu calitatea costă, ci lipsa ei.
+                Calitatea nu costă, ci lipsa ei.
               </p>
             </div>
 
