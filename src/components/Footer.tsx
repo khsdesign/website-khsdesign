@@ -126,7 +126,9 @@ export const Footer = () => {
                   className="text-black"
                   style={{ fontSize: v("11px", "13px", "16px") }}
                 >
-                  <div
+                  <a
+                    href="tel:+40735450650"
+                    aria-label="Call Cristina 0735450650"
                     className="flex items-center"
                     style={{
                       gap: v("9px", "10px", "14px"),
@@ -143,9 +145,11 @@ export const Footer = () => {
                         flexShrink: 0,
                       }}
                     />
-                    <p>0735450650 - Cristina (Achiziții)</p>
-                  </div>
-                  <div
+                    <p>0735450650 - Cristina (Achiziții plăci ceramice)</p>
+                  </a>
+                  <a
+                    href="tel:+40729400360"
+                    aria-label="Call Nicoleta 0729400360"
                     className="flex items-center"
                     style={{
                       gap: v("9px", "10px", "14px"),
@@ -162,8 +166,10 @@ export const Footer = () => {
                         flexShrink: 0,
                       }}
                     />
-                    <p>0744158868 - Alexa (Design)</p>
-                  </div>
+                    <p>
+                      0729400360 - Nicoleta (Achiziții materiale de construcție)
+                    </p>
+                  </a>
                   <a
                     href="https://maps.app.goo.gl/Y2s5uE81NCGY36St5"
                     target="_blank"

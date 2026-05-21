@@ -80,7 +80,7 @@ export const Header = () => {
           ["servicii", "SERVICII"],
           ["showroom", "SHOWROOM"],
           ["catalog", "CATALOG"],
-          ["echipa-noastra", "ECHIPA"],
+          // ["echipa-noastra", "ECHIPA"],
           ["contact", "CONTACT"],
         ].map(([id, label]) => (
           <a
