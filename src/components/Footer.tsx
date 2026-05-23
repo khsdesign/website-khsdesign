@@ -234,8 +234,8 @@ export const Footer = () => {
               <div
                 className="relative overflow-hidden rounded-[5px]"
                 style={{
-                  height: v("220px", "180px", "220px"),
-                  minHeight: v("220px", "180px", "220px"),
+                  height: v("234px", "180px", "220px"),
+                  minHeight: v("234px", "180px", "220px"),
                 }}
               >
                 <iframe
@@ -245,7 +245,7 @@ export const Footer = () => {
                   className="block w-full"
                   style={{
                     border: 0,
-                    height: v("248px", "180px", "220px"),
+                    height: v("246px", "180px", "220px"),
                   }}
                   allowFullScreen
                   loading="lazy"
