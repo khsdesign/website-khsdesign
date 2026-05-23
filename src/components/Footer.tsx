@@ -245,7 +245,7 @@ export const Footer = () => {
                   className="block w-full"
                   style={{
                     border: 0,
-                    height: v("247px", "180px", "220px"),
+                    height: v("250px", "180px", "220px"),
                   }}
                   allowFullScreen
                   loading="lazy"
