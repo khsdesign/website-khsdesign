@@ -231,21 +231,28 @@ export const Footer = () => {
             </div>
 
             <div className="w-full md:h-full md:self-end">
-              <iframe
-                src="https://maps.google.com/maps?q=Str.+Aurel+Vlaicu+Nr.+100,+Satu+Mare,+Romania&output=embed"
-                width="100%"
-                height="100%"
+              <div
+                className="relative overflow-hidden rounded-[5px]"
                 style={{
-                  border: 0,
-                  borderRadius: "5px",
-                  minHeight: v("140px", "180px", "220px"),
-                  display: "block",
+                  height: v("220px", "180px", "220px"),
+                  minHeight: v("220px", "180px", "220px"),
                 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="KHS Design Location"
-              />
+              >
+                <iframe
+                  src="https://maps.google.com/maps?q=Str.+Aurel+Vlaicu+Nr.+100,+Satu+Mare,+Romania&output=embed"
+                  width="100%"
+                  height="100%"
+                  className="block w-full"
+                  style={{
+                    border: 0,
+                    height: v("248px", "180px", "220px"),
+                  }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="KHS Design Location"
+                />
+              </div>
             </div>
           </div>
 
